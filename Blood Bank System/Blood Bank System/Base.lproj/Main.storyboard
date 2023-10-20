@@ -26,11 +26,11 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dpb-wa-iQA" userLabel="Buttons">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dpb-wa-iQA" userLabel="Buttons">
                                         <rect key="frame" x="0.0" y="67.666666666666629" width="353" height="607.33333333333337"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfT-F5-MHR">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="545"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="607.33333333333337"/>
                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                 <color key="tintColor" systemColor="systemRedColor"/>
                                                 <state key="normal" title="Button"/>
@@ -40,7 +40,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UY4-b9-C7s">
-                                                <rect key="frame" x="0.0" y="553" width="353" height="54.333333333333371"/>
+                                                <rect key="frame" x="180.66666666666663" y="0.0" width="172.33333333333337" height="607.33333333333337"/>
                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                 <color key="tintColor" systemColor="systemRedColor"/>
                                                 <state key="normal" title="Button"/>
@@ -50,14 +50,11 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="UY4-b9-C7s" firstAttribute="height" secondItem="pfT-F5-MHR" secondAttribute="height" multiplier="0.1" id="bPJ-CH-qSw"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="dpb-wa-iQA" firstAttribute="height" secondItem="pbi-DI-GrF" secondAttribute="height" multiplier="0.1" id="4tN-Ol-g8h"/>
                                     <constraint firstItem="0If-zM-XZA" firstAttribute="height" secondItem="pbi-DI-GrF" secondAttribute="height" multiplier="0.1" id="fmo-Ro-saf"/>
-                                    <constraint firstItem="dpb-wa-iQA" firstAttribute="height" secondItem="pbi-DI-GrF" secondAttribute="height" multiplier="0.1" id="tIG-Ht-rde"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -84,12 +81,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yar-tE-oxe">
-                                <rect key="frame" x="69" y="184" width="228" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rK4-M5-WSB">
                                 <rect key="frame" x="69" y="265" width="228" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -102,6 +93,12 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Login"/>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yar-tE-oxe">
+                                <rect key="frame" x="123" y="167" width="228" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6M7-ik-Lsw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
