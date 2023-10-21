@@ -1,45 +1,29 @@
 //
-//  LoginVC.swift
+//  RegistrationVC.swift
 //  Blood Bank System
 //
-//  Created by Konanki,Naga Lakshmi on 10/20/23.
+//  Created by Naga Lakshmi Konanki on 10/20/23.
 //
 
 import UIKit
 
-
-class LoginVC: UIViewController {
+class RegistrationVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
     @IBOutlet weak var titleLBL: UILabel!
     
     @IBOutlet weak var emailTF: UITextField!
     
     @IBOutlet weak var passwordTF: UITextField!
     
-    @IBAction func loginClicked(_ sender: UIButton) {
+    @IBAction func signupClicked(_ sender: UIButton) {
         
     }
-    
-    @IBAction func cancelClicked(_ sender: UIButton) {
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
