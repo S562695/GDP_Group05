@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RegistrationVC: UIViewController {
 
@@ -22,10 +23,32 @@ class RegistrationVC: UIViewController {
     @IBOutlet weak var passwordTF: UITextField!
     
     @IBAction func signupClicked(_ sender: UIButton) {
-        
+        // Check if the email and password fields are not empty
+            guard let email = emailTF.text, !email.isEmpty,
+            let password = passwordTF.text, !password.isEmpty else {
+                // Display an error message if fields are empty
+                showAlert(title: "Error", message: "Please enter both email and password.")
+                return
+            }
+            
+            // Create a new user account with Firebase Authentication
+            Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
+                if let error = error {
+                    // An error occurred during registration
+                    self.showAlert(title: "Error", message: error.localizedDescription)
+                } else {
+                    // Registration successful
+                    self.showAlert(title: "Success", message: "Registration successful!")
+                }
+            }
     }
     
-    
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+    }
     
     
     
