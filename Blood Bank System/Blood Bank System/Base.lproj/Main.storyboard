@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jUp-jy-BlA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b1O-gT-3A5">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -9,71 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Blood Bank System🩸-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Blood_Bank_System" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4tl-hL-Pe2" userLabel="BigContainerSV">
-                                <rect key="frame" x="200" y="363.33333333333331" width="142.33333333333337" height="254.66666666666669"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wuW-S6-XZ8">
-                                        <rect key="frame" x="0.0" y="0.0" width="142.33333333333334" height="254.66666666666666"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfT-F5-MHR">
-                                                <rect key="frame" x="0.0" y="0.0" width="142.33333333333334" height="79.666666666666671"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Login"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Login" cornerStyle="capsule">
-                                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <segue destination="AYe-j6-W6l" kind="show" identifier="loginSegue" id="AZr-O5-Unk"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UY4-b9-C7s">
-                                                <rect key="frame" x="0.0" y="87.666666666666686" width="142.33333333333334" height="79.333333333333314"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Create Account" cornerStyle="capsule">
-                                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <segue destination="3CQ-eH-laq" kind="show" identifier="registerSegue" id="luO-bP-iMk"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOP-BA-PQ3">
-                                                <rect key="frame" x="0.0" y="175.00000000000006" width="142.33333333333334" height="79.666666666666686"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Admin" cornerStyle="capsule">
-                                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <segue destination="9fn-B6-9tm" kind="show" identifier="adminSegue" id="3lA-KT-MNH"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4tl-hL-Pe2" secondAttribute="bottom" constant="200" id="A9u-Ed-6we"/>
-                            <constraint firstItem="4tl-hL-Pe2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="200" id="HSM-7o-hDE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4tl-hL-Pe2" secondAttribute="trailing" constant="200" id="XNu-Ht-cAD"/>
-                            <constraint firstItem="4tl-hL-Pe2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="c7w-nM-By2"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Blood Bank System🩸" id="oPB-fn-Su9"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="324.4274809160305" y="-10.563380281690142"/>
-        </scene>
         <!--Admin Login-->
         <scene sceneID="NB9-pg-wI4">
             <objects>
@@ -303,25 +238,58 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bjK-pn-8B9" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1141.2213740458014" y="-178.87323943661974"/>
+            <point key="canvasLocation" x="2067.93893129771" y="-178.87323943661974"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="bo8-UL-xCZ">
+        <!--Blood Bank System🩸-->
+        <scene sceneID="tPm-PZ-AnS">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jUp-jy-BlA" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="1w9-Gh-xro">
-                        <rect key="frame" x="0.0" y="59" width="393" height="104.33333333333334"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dGj-FO-mrN"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wUX-LQ-Gv7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="wio-vE-Eed" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h3X-49-bR9">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3E-Ia-qsP">
+                                <rect key="frame" x="164" y="409" width="66" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Login" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="AYe-j6-W6l" kind="show" identifier="loginSegue" id="Egw-Pl-vJc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTD-S2-Lyx">
+                                <rect key="frame" x="115" y="475" width="143" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Create Account" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="3CQ-eH-laq" kind="show" identifier="registerSegue" id="buv-aq-2nd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIk-VR-G0y">
+                                <rect key="frame" x="156" y="546" width="73" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Admin" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="9fn-B6-9tm" kind="show" identifier="adminSegue" id="OWc-2g-bIe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="f4l-IE-7av"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Blood Bank System🩸" id="Dqw-aO-ZD7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EDq-rY-doO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-602.29007633587787" y="-10.563380281690142"/>
+            <point key="canvasLocation" x="1162.5954198473282" y="-80.281690140845072"/>
         </scene>
         <!--Registration Page-->
         <scene sceneID="vqr-yK-4zj">
@@ -470,13 +438,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d2P-5L-gMl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1900" y="185"/>
+            <point key="canvasLocation" x="2826.7175572519081" y="184.50704225352115"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CXn-Br-uDP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b1O-gT-3A5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="jg1-6w-7vC">
+                        <rect key="frame" x="0.0" y="59" width="393" height="104.33333333333334"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wio-vE-Eed" kind="relationship" relationship="rootViewController" id="4y0-KX-y0q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jlP-kh-KQX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="235.87786259541983" y="-80.281690140845072"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="2VV-SQ-4Ug"/>
-        <segue reference="luO-bP-iMk"/>
-        <segue reference="AZr-O5-Unk"/>
+        <segue reference="buv-aq-2nd"/>
+        <segue reference="Egw-Pl-vJc"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
