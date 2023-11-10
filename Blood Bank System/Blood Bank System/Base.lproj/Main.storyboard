@@ -37,11 +37,17 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="116.66666666666667"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="checkUsername:" destination="9fn-B6-9tm" eventType="editingDidEnd" id="eOk-Hi-MD7"/>
+                                                                </connections>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter admin Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TNZ-fS-efY">
                                                                 <rect key="frame" x="0.0" y="124.66666666666669" width="353" height="116.66666666666669"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="checkPassword:" destination="9fn-B6-9tm" eventType="editingDidEnd" id="3LP-3N-4fd"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -62,6 +68,7 @@
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="loginClicked:" destination="9fn-B6-9tm" eventType="touchUpInside" id="fWN-AM-ZCn"/>
+                                                                    <segue destination="j6k-fn-IZU" kind="show" identifier="homeSegue" id="peE-SS-diD"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4QH-jE-ahS" userLabel="ResetBTN">
@@ -337,8 +344,39 @@
                                             <segue destination="cpJ-uv-ifY" kind="show" id="LiA-Vb-VwC"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesID" id="uYO-nI-uLQ" userLabel="DashboardCell" customClass="CategorietypeCell" customModule="AnumoluRecipeFinderApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="181.00000381469727" width="393" height="54.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uYO-nI-uLQ" id="ClX-mX-gSK">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="54.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="s3w-4d-Td9" userLabel="BigContainer">
+                                                    <rect key="frame" x="20" y="10" width="363" height="34.666666666666664"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEN-qo-JtS">
+                                                            <rect key="frame" x="0.0" y="0.0" width="363" height="34.666666666666664"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="filled" title="Schedule Appointment" cornerStyle="capsule">
+                                                                <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                                            </buttonConfiguration>
+                                                            <connections>
+                                                                <segue destination="YUt-G2-chR" kind="show" id="UCY-6f-YBp"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="s3w-4d-Td9" firstAttribute="leading" secondItem="ClX-mX-gSK" secondAttribute="leading" constant="20" id="4D1-UI-ypH"/>
+                                                <constraint firstAttribute="bottom" secondItem="s3w-4d-Td9" secondAttribute="bottom" constant="10" id="IlH-A3-5eM"/>
+                                                <constraint firstItem="s3w-4d-Td9" firstAttribute="top" secondItem="ClX-mX-gSK" secondAttribute="top" constant="10" id="MJp-Nn-KnQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="s3w-4d-Td9" secondAttribute="trailing" constant="10" id="q71-e2-mbv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesID" id="Dpx-DR-2Um" userLabel="DashboardCell" customClass="CategorietypeCell" customModule="AnumoluRecipeFinderApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="181.00000381469727" width="393" height="46.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="235.66667175292969" width="393" height="46.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dpx-DR-2Um" id="kKd-Eb-63M">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="46.666667938232422"/>
@@ -365,7 +403,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesID" rowHeight="126" id="wTn-0k-6VS" userLabel="DashboardCell" customClass="CategorietypeCell" customModule="AnumoluRecipeFinderApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="227.66667175292969" width="393" height="126"/>
+                                        <rect key="frame" x="0.0" y="282.33333969116211" width="393" height="126"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wTn-0k-6VS" id="SbT-TU-4h1">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="126"/>
@@ -374,7 +412,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="d9w-l6-bd2" userLabel="BigContainer">
                                                     <rect key="frame" x="20" y="10" width="363" height="106"/>
                                                     <subviews>
-                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3GT-Be-na7">
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3GT-Be-na7">
                                                             <rect key="frame" x="0.0" y="0.0" width="363" height="106"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <string key="text">We are here to revolutionize the blood donation process and empower lives, one drop at a time, with the ultimate iOS Blood Bank System.</string>
@@ -393,28 +431,28 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesID" id="YLK-8t-039" userLabel="DashboardCell" customClass="CategorietypeCell" customModule="AnumoluRecipeFinderApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="353.66667175292969" width="393" height="271"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesID" rowHeight="126" id="mwi-nR-IJ7" userLabel="DashboardCell" customClass="CategorietypeCell" customModule="AnumoluRecipeFinderApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="408.33333969116211" width="393" height="126"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YLK-8t-039" id="amo-N2-RM5">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="271"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mwi-nR-IJ7" id="Y9Q-hL-BAv">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="126"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8t4-Jl-lel" userLabel="BigContainer">
-                                                    <rect key="frame" x="20" y="10" width="353" height="261"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="k6h-ma-c4c" userLabel="BigContainer">
+                                                    <rect key="frame" x="20" y="10" width="363" height="106"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T1q-tP-aDG" customClass="LottieAnimationView" customModule="Lottie">
-                                                            <rect key="frame" x="0.0" y="0.0" width="353" height="261"/>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        </view>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bb" highlightedImage="bb" highlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MW8-43-Yub">
+                                                            <rect key="frame" x="0.0" y="0.0" width="363" height="106"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                                        </imageView>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="8t4-Jl-lel" secondAttribute="bottom" id="ElS-LZ-azZ"/>
-                                                <constraint firstItem="8t4-Jl-lel" firstAttribute="leading" secondItem="amo-N2-RM5" secondAttribute="leading" constant="20" id="Na1-us-NZo"/>
-                                                <constraint firstAttribute="trailing" secondItem="8t4-Jl-lel" secondAttribute="trailing" constant="20" id="ScW-0t-SZY"/>
-                                                <constraint firstItem="8t4-Jl-lel" firstAttribute="top" secondItem="amo-N2-RM5" secondAttribute="top" constant="10" id="qve-LP-L68"/>
+                                                <constraint firstItem="k6h-ma-c4c" firstAttribute="top" secondItem="Y9Q-hL-BAv" secondAttribute="top" constant="10" id="Ubz-u6-bNE"/>
+                                                <constraint firstAttribute="bottom" secondItem="k6h-ma-c4c" secondAttribute="bottom" constant="10" id="fnp-X2-Dg4"/>
+                                                <constraint firstItem="k6h-ma-c4c" firstAttribute="leading" secondItem="Y9Q-hL-BAv" secondAttribute="leading" constant="20" id="hFb-OO-fSz"/>
+                                                <constraint firstAttribute="trailing" secondItem="k6h-ma-c4c" secondAttribute="trailing" constant="10" id="twI-Rv-OH7"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -427,9 +465,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Give Blood - Save Lives" id="0S3-Xw-aH3"/>
-                    <connections>
-                        <outlet property="LogoAnimationView" destination="T1q-tP-aDG" id="A1N-p7-qgd"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="THG-Im-laS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -556,6 +591,7 @@
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="signupClicked:" destination="3CQ-eH-laq" eventType="touchUpInside" id="B5A-r4-rta"/>
+                                                            <segue destination="j6k-fn-IZU" kind="show" identifier="homeSegue" id="aun-Uf-oKG"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Car-tu-gXS" userLabel="ResetBTN">
@@ -694,12 +730,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tSG-pT-ERy"/>
-        <segue reference="fwa-rP-8s8"/>
+        <segue reference="buv-aq-2nd"/>
+        <segue reference="peE-SS-diD"/>
         <segue reference="Egw-Pl-vJc"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="admin" width="250" height="250"/>
+        <image name="bb" width="512" height="512"/>
         <image name="donor1" width="1200" height="800"/>
         <image name="patient" width="225" height="225"/>
         <systemColor name="labelColor">

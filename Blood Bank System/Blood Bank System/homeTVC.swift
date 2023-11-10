@@ -18,17 +18,14 @@ class homeTVC: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        LogoAnimationView.animation = LottieAnimation.named("Give Blood-Save Lives")
-        LogoAnimationView.loopMode = .loop
-        LogoAnimationView.play(){
-            [weak self] _ in
-            self?.LogoAnimationView.isHidden = false
-        }
+        
+            
+       
         
     }
     
     
-    @IBOutlet weak var LogoAnimationView: LottieAnimationView!
+    //@IBOutlet weak var LogoAnimationView: LottieAnimationView!
     
     
     // MARK: - Table view data source
