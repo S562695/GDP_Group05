@@ -62,7 +62,7 @@ class LoginVC: UIViewController {
             } else {
                 // Registration successful
                 self.showAlert(title: "Success", message: "Login successful!")
-                    self.performSegue(withIdentifier: "goToNext", sender: nil)
+                self.performSegue(withIdentifier: "homeSegue", sender: nil)
                 
                 //self.present(animated: true, completion: nil)
             }
@@ -71,21 +71,9 @@ class LoginVC: UIViewController {
         
 }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        self.applyAnimatedGradient()
-    }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.view.subviews.first?.removeFromSuperview()
-    }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        self.view.subviews.first?.frame = self.view.bounds
-    }
+    
     
     private func applyAnimatedGradient(){
         let animatedGradient = AnimatedGradientView(frame: view.bounds)
@@ -100,11 +88,14 @@ class LoginVC: UIViewController {
 
 func showAlert(title: String, message: String) {
     let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-    let okAction = UIAlertAction(title: "OK", style: .default)
+    let okAction = UIAlertAction(title: "OK", style: .default){ [weak self] _ in
+        
+        self?.performSegue(withIdentifier: "homeSegue", sender: nil)
+    }
     alertController.addAction(okAction)
     present(alertController, animated: true, completion: nil)
 }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let identifier = segue.identifier
         switch identifier{
         case "goToNext":
@@ -113,7 +104,7 @@ func showAlert(title: String, message: String) {
         default:
             break
         }
-    }
+    }*/
     
 
     

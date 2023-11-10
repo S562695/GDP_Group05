@@ -39,10 +39,10 @@ class RegistrationVC: UIViewController {
     @IBOutlet weak var resetBTN: UIButton!
     
     @IBAction func signupClicked(_ sender: UIButton) {
-        // Check if the email and password fields are not empty
+        
             guard let email = emailTF.text, !email.isEmpty,
             let password = passwordTF.text, !password.isEmpty else {
-                // Display an error message if fields are empty
+                
                 showAlert(title: "Error", message: "Please enter both email and password.")
                 return
             }
@@ -54,7 +54,8 @@ class RegistrationVC: UIViewController {
                     self.showAlert(title: "Error", message: error.localizedDescription)
                 } else {
                     // Registration successful
-                    self.showAlert(title: "Success", message: "Registration successful!")
+                    self.showAlert(title: "Success", message: "Registration successful! Go to Login page")
+                    
                 }
             }
     }
@@ -72,6 +73,7 @@ class RegistrationVC: UIViewController {
         signUpBtn.isEnabled = false
         resetBTN.isEnabled = false
         passwordTF.isEnabled = false
+        fullNameTF.text = ""
     }
     
     private func applyAnimatedGradient(){

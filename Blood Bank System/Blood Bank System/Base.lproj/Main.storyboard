@@ -68,7 +68,6 @@
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="loginClicked:" destination="9fn-B6-9tm" eventType="touchUpInside" id="fWN-AM-ZCn"/>
-                                                                    <segue destination="j6k-fn-IZU" kind="show" identifier="homeSegue" id="peE-SS-diD"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4QH-jE-ahS" userLabel="ResetBTN">
@@ -120,6 +119,7 @@
                         <outlet property="passwordTF" destination="TNZ-fS-efY" id="9iF-qL-xwu"/>
                         <outlet property="resetBTN" destination="4QH-jE-ahS" id="ISg-8T-oWn"/>
                         <outlet property="usernameTF" destination="6dn-0B-TVG" id="920-uu-hbY"/>
+                        <segue destination="j6k-fn-IZU" kind="show" identifier="adminHomeSegue" id="p94-dg-LUB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r2k-PX-vjD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -186,7 +186,6 @@
                                                                 <connections>
                                                                     <action selector="loginClicked:" destination="AYe-j6-W6l" eventType="touchUpInside" id="r3D-Ws-7G9"/>
                                                                     <action selector="signupClicked:" destination="3CQ-eH-laq" eventType="touchUpInside" id="BCj-G0-EQM"/>
-                                                                    <segue destination="j6k-fn-IZU" kind="show" identifier="homeSegue" id="fwa-rP-8s8"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyP-Ba-BpS" userLabel="ResetBTN">
@@ -254,7 +253,7 @@
                         <outlet property="loginBTN" destination="xdo-Ky-1YW" id="vs1-6V-pA1"/>
                         <outlet property="passwordTF" destination="pfY-x3-JtF" id="c97-XI-5h9"/>
                         <outlet property="resetBTN" destination="eyP-Ba-BpS" id="aEu-Ky-pqA"/>
-                        <segue destination="j6k-fn-IZU" kind="show" identifier="goToNext" id="Vrq-g7-pJP"/>
+                        <segue destination="j6k-fn-IZU" kind="show" identifier="homeSegue" id="Vrq-g7-pJP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bjK-pn-8B9" sceneMemberID="firstResponder"/>
@@ -591,7 +590,6 @@
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="signupClicked:" destination="3CQ-eH-laq" eventType="touchUpInside" id="B5A-r4-rta"/>
-                                                            <segue destination="j6k-fn-IZU" kind="show" identifier="homeSegue" id="aun-Uf-oKG"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Car-tu-gXS" userLabel="ResetBTN">
@@ -655,7 +653,7 @@
                         <outlet property="passwordTF" destination="LrZ-iU-gFR" id="ki5-Ws-Ph9"/>
                         <outlet property="resetBTN" destination="Car-tu-gXS" id="PM7-gq-2zg"/>
                         <outlet property="signUpBtn" destination="I0s-PO-FV7" id="r7W-dM-Yfk"/>
-                        <segue destination="j6k-fn-IZU" kind="show" identifier="goToNext" id="QdB-lo-std"/>
+                        <segue destination="j6k-fn-IZU" kind="show" identifier="homeSegue" id="QdB-lo-std"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PiB-76-4hq" sceneMemberID="firstResponder"/>
@@ -731,7 +729,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="buv-aq-2nd"/>
-        <segue reference="peE-SS-diD"/>
+        <segue reference="p94-dg-LUB"/>
         <segue reference="Egw-Pl-vJc"/>
     </inferredMetricsTieBreakers>
     <resources>

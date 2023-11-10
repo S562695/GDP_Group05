@@ -55,12 +55,13 @@ class AdminLoginVC: UIViewController {
         }
         
         // Create a new user account with Firebase Authentication
-        Auth.auth().createUser(withEmail: email, password: password) { [self] (authResult, error) in
+        //Auth.auth().createUser(withEmail: email, password: password) { [self] (authResult, error) in
              if usernameTF.text == "admin@gmail.com" && self.passwordTF.text == "lakshmi" {
                 self.showAlert(title: "Successful", message: "Admin Login Successful")
+                 self.performSegue(withIdentifier: "adminHomeSegue", sender: nil)
                 
             }
-        }
+        //}
         
     }
     
@@ -82,54 +83,15 @@ class AdminLoginVC: UIViewController {
     
     func showAlert(title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
+        let okAction = UIAlertAction(title: "OK", style: .default){ [weak self] _ in
+            
+            self?.performSegue(withIdentifier: "adminHomeSegue", sender: nil)
+        }
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }
         
-        
-        
-        override func viewWillAppear(_ animated: Bool) {
-            super.viewWillAppear(animated)
-            self.usernameTF.text = ""
-            self.passwordTF.text = ""
-            
-            self.applyAnimatedGradient()
-        }
-        
-        override func viewWillDisappear(_ animated: Bool) {
-            super.viewWillDisappear(animated)
-            self.view.subviews.first?.removeFromSuperview()
-        }
-        
-        override func viewDidLayoutSubviews() {
-            super.viewDidLayoutSubviews()
-            self.view.subviews.first?.frame = self.view.bounds
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-            let identifier = segue.identifier
-            switch identifier{
-            case "goToNext":
-                guard let productvc = segue.destination as? homeTVC else {return}
-                //productvc.navigationItem.title = "Products"
-            default:
-                break
-            }
-        }
-    
-    
-    
-    
-    
-    
+  
     
     /*
     // MARK: - Navigation
