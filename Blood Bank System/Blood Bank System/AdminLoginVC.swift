@@ -15,6 +15,24 @@ class AdminLoginVC: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        self.applyAnimatedGradient()
+        LogoAnimationView.animation = LottieAnimation.named("adminImg")
+                LogoAnimationView.loopMode = .loop
+                LogoAnimationView.play(){
+                    [weak self] _ in
+                    self?.LogoAnimationView.isHidden = false
+                }
+        // Do any additional setup after loading the view.
+    }
+    
+    private func applyAnimatedGradient(){
+        let animatedGradient = AnimatedGradientView(frame: view.bounds)
+        animatedGradient.direction = .up
+        animatedGradient.animationValues = [(colors: ["#2BCOE4", "#EAECC6"], .up, .axial),
+                                            (colors: ["#833ab4", "#fd1d1d", "fcb045"], .right, .axial),
+                                            (colors: ["#003973", "#E6E68E"], .down, .axial),
+                                            (colors: ["#1E9600", "#FFF200", "FF0000"], .left, .axial)]
+        view.insertSubview(animatedGradient, at: 0)
     }
     
     @IBOutlet weak var LogoAnimationView: LottieAnimationView!
