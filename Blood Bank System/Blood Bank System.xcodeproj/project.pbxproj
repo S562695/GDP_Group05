@@ -18,6 +18,9 @@
 		3896CD0E2AE2F271004107F1 /* Blood_Bank_SystemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3896CD0D2AE2F271004107F1 /* Blood_Bank_SystemUITests.swift */; };
 		3896CD102AE2F271004107F1 /* Blood_Bank_SystemUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3896CD0F2AE2F271004107F1 /* Blood_Bank_SystemUITestsLaunchTests.swift */; };
 		3896CD1D2AE2F5C6004107F1 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3896CD1C2AE2F5C6004107F1 /* LoginVC.swift */; };
+		4007BF9C2AFDCF1A00EECA4B /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 4007BF9B2AFDCF1A00EECA4B /* Lottie */; };
+		4007BF9F2AFDCF3400EECA4B /* AnimatedGradientView in Frameworks */ = {isa = PBXBuildFile; productRef = 4007BF9E2AFDCF3400EECA4B /* AnimatedGradientView */; };
+		4007BFA12AFE0C7E00EECA4B /* AdminLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4007BFA02AFE0C7E00EECA4B /* AdminLoginVC.swift */; };
 		40E5E1942AE34AFD00AB5640 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E5E1932AE34AFD00AB5640 /* RegistrationVC.swift */; };
 		40E5E1962AE3550E00AB5640 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E5E1952AE3550E00AB5640 /* HomeVC.swift */; };
 		40E5E1982AE357E100AB5640 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40E5E1972AE357E100AB5640 /* GoogleService-Info.plist */; };
@@ -57,6 +60,7 @@
 		3896CD0D2AE2F271004107F1 /* Blood_Bank_SystemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blood_Bank_SystemUITests.swift; sourceTree = "<group>"; };
 		3896CD0F2AE2F271004107F1 /* Blood_Bank_SystemUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blood_Bank_SystemUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3896CD1C2AE2F5C6004107F1 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		4007BFA02AFE0C7E00EECA4B /* AdminLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginVC.swift; sourceTree = "<group>"; };
 		40E5E1932AE34AFD00AB5640 /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
 		40E5E1952AE3550E00AB5640 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		40E5E1972AE357E100AB5640 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				40E5E19B2AE3588B00AB5640 /* FirebaseAuth in Frameworks */,
+				4007BF9C2AFDCF1A00EECA4B /* Lottie in Frameworks */,
+				4007BF9F2AFDCF3400EECA4B /* AnimatedGradientView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +124,7 @@
 				40E5E1932AE34AFD00AB5640 /* RegistrationVC.swift */,
 				3896CD1C2AE2F5C6004107F1 /* LoginVC.swift */,
 				3896CCEF2AE2F270004107F1 /* Main.storyboard */,
+				4007BFA02AFE0C7E00EECA4B /* AdminLoginVC.swift */,
 				3896CCF52AE2F271004107F1 /* Assets.xcassets */,
 				3896CCF72AE2F271004107F1 /* LaunchScreen.storyboard */,
 				3896CCFA2AE2F271004107F1 /* Info.plist */,
@@ -162,6 +169,8 @@
 			name = "Blood Bank System";
 			packageProductDependencies = (
 				40E5E19A2AE3588B00AB5640 /* FirebaseAuth */,
+				4007BF9B2AFDCF1A00EECA4B /* Lottie */,
+				4007BF9E2AFDCF3400EECA4B /* AnimatedGradientView */,
 			);
 			productName = "Blood Bank System";
 			productReference = 3896CCE62AE2F270004107F1 /* Blood Bank System.app */;
@@ -237,6 +246,8 @@
 			mainGroup = 3896CCDD2AE2F270004107F1;
 			packageReferences = (
 				40E5E1992AE3588B00AB5640 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				4007BF9A2AFDCF1A00EECA4B /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				4007BF9D2AFDCF3400EECA4B /* XCRemoteSwiftPackageReference "AnimatedGradientView" */,
 			);
 			productRefGroup = 3896CCE72AE2F270004107F1 /* Products */;
 			projectDirPath = "";
@@ -284,6 +295,7 @@
 			files = (
 				3896CCEE2AE2F270004107F1 /* ViewController.swift in Sources */,
 				40E5E1962AE3550E00AB5640 /* HomeVC.swift in Sources */,
+				4007BFA12AFE0C7E00EECA4B /* AdminLoginVC.swift in Sources */,
 				40E5E1942AE34AFD00AB5640 /* RegistrationVC.swift in Sources */,
 				3896CCF42AE2F270004107F1 /* Blood_Bank_System.xcdatamodeld in Sources */,
 				3896CCEA2AE2F270004107F1 /* AppDelegate.swift in Sources */,
@@ -626,6 +638,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4007BF9A2AFDCF1A00EECA4B /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		4007BF9D2AFDCF3400EECA4B /* XCRemoteSwiftPackageReference "AnimatedGradientView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rwbutler/AnimatedGradientView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		40E5E1992AE3588B00AB5640 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -637,6 +665,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4007BF9B2AFDCF1A00EECA4B /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4007BF9A2AFDCF1A00EECA4B /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		4007BF9E2AFDCF3400EECA4B /* AnimatedGradientView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4007BF9D2AFDCF3400EECA4B /* XCRemoteSwiftPackageReference "AnimatedGradientView" */;
+			productName = AnimatedGradientView;
+		};
 		40E5E19A2AE3588B00AB5640 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 40E5E1992AE3588B00AB5640 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
