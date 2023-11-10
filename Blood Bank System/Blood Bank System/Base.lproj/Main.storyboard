@@ -179,6 +179,7 @@
                                                                 <connections>
                                                                     <action selector="loginClicked:" destination="AYe-j6-W6l" eventType="touchUpInside" id="r3D-Ws-7G9"/>
                                                                     <action selector="signupClicked:" destination="3CQ-eH-laq" eventType="touchUpInside" id="BCj-G0-EQM"/>
+                                                                    <segue destination="j6k-fn-IZU" kind="show" identifier="homeSegue" id="fwa-rP-8s8"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyP-Ba-BpS" userLabel="ResetBTN">
@@ -261,14 +262,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="J6u-DN-ggs">
-                            <rect key="frame" x="0.0" y="209.00000381469727" width="393" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" title="Schedule Appointment">
-                                <color key="baseBackgroundColor" systemColor="systemRedColor"/>
-                            </buttonConfiguration>
-                        </button>
                         <sections>
                             <tableViewSection headerTitle="Blood Bank System🩸" id="ebO-fe-r25">
                                 <cells>
@@ -292,6 +285,9 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="xL7-aa-tcY" kind="show" id="8Jx-Nm-b2q"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DashboardCell" textLabel="VkM-l6-o8X" imageView="5ia-Gq-Wqu" style="IBUITableViewCellStyleDefault" id="1oC-RU-Svo">
                                         <rect key="frame" x="0.0" y="93.666667938232422" width="393" height="43.666667938232422"/>
@@ -313,6 +309,9 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="DBS-tV-nKg" kind="show" id="hfR-nM-22A"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DashboardCell" textLabel="Xba-WY-DSY" imageView="mi0-Lo-TVn" style="IBUITableViewCellStyleDefault" id="yir-Me-PTo">
                                         <rect key="frame" x="0.0" y="137.33333587646484" width="393" height="43.666667938232422"/>
@@ -334,6 +333,90 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="cpJ-uv-ifY" kind="show" id="LiA-Vb-VwC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesID" id="Dpx-DR-2Um" userLabel="DashboardCell" customClass="CategorietypeCell" customModule="AnumoluRecipeFinderApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="181.00000381469727" width="393" height="46.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dpx-DR-2Um" id="kKd-Eb-63M">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="46.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HmW-JI-8bE" userLabel="BigContainer">
+                                                    <rect key="frame" x="20" y="10.000000000000002" width="363" height="26.666666666666671"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to our Blood bank System!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6l-G8-o3d">
+                                                            <rect key="frame" x="0.0" y="0.0" width="363" height="26.666666666666668"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                            <color key="textColor" systemColor="systemRedColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="HmW-JI-8bE" secondAttribute="bottom" constant="10" id="3Td-Aj-xW1"/>
+                                                <constraint firstItem="HmW-JI-8bE" firstAttribute="leading" secondItem="kKd-Eb-63M" secondAttribute="leading" constant="20" id="UTt-F7-qte"/>
+                                                <constraint firstAttribute="trailing" secondItem="HmW-JI-8bE" secondAttribute="trailing" constant="10" id="ZXi-CI-7Ss"/>
+                                                <constraint firstItem="HmW-JI-8bE" firstAttribute="top" secondItem="kKd-Eb-63M" secondAttribute="top" constant="10" id="ySb-F7-MxW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesID" rowHeight="126" id="wTn-0k-6VS" userLabel="DashboardCell" customClass="CategorietypeCell" customModule="AnumoluRecipeFinderApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="227.66667175292969" width="393" height="126"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wTn-0k-6VS" id="SbT-TU-4h1">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="126"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="d9w-l6-bd2" userLabel="BigContainer">
+                                                    <rect key="frame" x="20" y="10" width="363" height="106"/>
+                                                    <subviews>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3GT-Be-na7">
+                                                            <rect key="frame" x="0.0" y="0.0" width="363" height="106"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <string key="text">We are here to revolutionize the blood donation process and empower lives, one drop at a time, with the ultimate iOS Blood Bank System.</string>
+                                                            <color key="textColor" systemColor="labelColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="d9w-l6-bd2" secondAttribute="bottom" constant="10" id="DCe-nF-elc"/>
+                                                <constraint firstItem="d9w-l6-bd2" firstAttribute="leading" secondItem="SbT-TU-4h1" secondAttribute="leading" constant="20" id="bFz-Fg-9wF"/>
+                                                <constraint firstItem="d9w-l6-bd2" firstAttribute="top" secondItem="SbT-TU-4h1" secondAttribute="top" constant="10" id="dm9-zw-lfo"/>
+                                                <constraint firstAttribute="trailing" secondItem="d9w-l6-bd2" secondAttribute="trailing" constant="10" id="snB-eI-uGO"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesID" id="YLK-8t-039" userLabel="DashboardCell" customClass="CategorietypeCell" customModule="AnumoluRecipeFinderApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="353.66667175292969" width="393" height="271"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YLK-8t-039" id="amo-N2-RM5">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="271"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8t4-Jl-lel" userLabel="BigContainer">
+                                                    <rect key="frame" x="20" y="10" width="353" height="261"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T1q-tP-aDG" customClass="LottieAnimationView" customModule="Lottie">
+                                                            <rect key="frame" x="0.0" y="0.0" width="353" height="261"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="8t4-Jl-lel" secondAttribute="bottom" id="ElS-LZ-azZ"/>
+                                                <constraint firstItem="8t4-Jl-lel" firstAttribute="leading" secondItem="amo-N2-RM5" secondAttribute="leading" constant="20" id="Na1-us-NZo"/>
+                                                <constraint firstAttribute="trailing" secondItem="8t4-Jl-lel" secondAttribute="trailing" constant="20" id="ScW-0t-SZY"/>
+                                                <constraint firstItem="8t4-Jl-lel" firstAttribute="top" secondItem="amo-N2-RM5" secondAttribute="top" constant="10" id="qve-LP-L68"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -344,10 +427,29 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Give Blood - Save Lives" id="0S3-Xw-aH3"/>
+                    <connections>
+                        <outlet property="LogoAnimationView" destination="T1q-tP-aDG" id="A1N-p7-qgd"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="THG-Im-laS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2954.9618320610684" y="195.77464788732397"/>
+        </scene>
+        <!--Donor Management-->
+        <scene sceneID="bEZ-a4-oyN">
+            <objects>
+                <viewController id="xL7-aa-tcY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HTe-WJ-HPv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="X2d-8W-Xov"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Donor Management" id="4UP-E3-8bj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zgu-kC-Z7s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3792" y="62"/>
         </scene>
         <!--Blood Bank System🩸-->
         <scene sceneID="tPm-PZ-AnS">
@@ -542,16 +644,67 @@
             </objects>
             <point key="canvasLocation" x="235.87786259541983" y="-80.281690140845072"/>
         </scene>
+        <!--Patient Management-->
+        <scene sceneID="nJ4-PG-XSt">
+            <objects>
+                <viewController id="DBS-tV-nKg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Kr-as-LwY">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="NbW-EK-t4t"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Patient Management" id="Vob-AR-xBh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MZe-cJ-2JU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3821" y="711"/>
+        </scene>
+        <!--Admin Details-->
+        <scene sceneID="FYC-UQ-VSO">
+            <objects>
+                <viewController id="cpJ-uv-ifY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iRo-3b-2AR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="VcN-ml-2Ww"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Admin Details" id="LRz-Jb-jks"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="efR-as-Z4p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4650" y="62"/>
+        </scene>
+        <!--Schedule Appointment-->
+        <scene sceneID="wdI-RE-5xB">
+            <objects>
+                <viewController id="YUt-G2-chR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g9S-2t-mg1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="pVd-Cq-B3u"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Schedule Appointment" id="nOn-T7-8ky"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GXQ-Z0-QwN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4688" y="725"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="tSG-pT-ERy"/>
-        <segue reference="Vrq-g7-pJP"/>
+        <segue reference="fwa-rP-8s8"/>
         <segue reference="Egw-Pl-vJc"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="admin" width="250" height="250"/>
         <image name="donor1" width="1200" height="800"/>
         <image name="patient" width="225" height="225"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

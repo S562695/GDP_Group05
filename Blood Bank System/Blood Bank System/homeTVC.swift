@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 class homeTVC: UITableViewController {
 
@@ -17,18 +18,29 @@ class homeTVC: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        LogoAnimationView.animation = LottieAnimation.named("Give Blood-Save Lives")
+        LogoAnimationView.loopMode = .loop
+        LogoAnimationView.play(){
+            [weak self] _ in
+            self?.LogoAnimationView.isHidden = false
+        }
+        
     }
-
+    
+    
+    @IBOutlet weak var LogoAnimationView: LottieAnimationView!
+    
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 7
     }
 
     /*
