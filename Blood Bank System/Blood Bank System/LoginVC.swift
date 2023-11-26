@@ -14,7 +14,7 @@ class LoginVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.applyAnimatedGradient()
+                self.applyAnimatedGradient()
                 LogoAnimationView.animation = LottieAnimation.named("LoginImage")
                 LogoAnimationView.loopMode = .loop
                 LogoAnimationView.play(){
@@ -23,57 +23,6 @@ class LoginVC: UIViewController {
                 }
         // Do any additional setup after loading the view.
     }
-    
-    
-    
-    @IBOutlet weak var LogoAnimationView: LottieAnimationView!
-    
-    @IBOutlet weak var emailTF: UITextField!
-    
-    @IBOutlet weak var passwordTF: UITextField!
-    
-    @IBOutlet weak var loginBTN: UIButton!
-    
-    @IBOutlet weak var resetBTN: UIButton!
-    
-    @IBAction func usernameTF(_ sender: UITextField) {
-        
-    }
-    
-    
-    @IBAction func passwordTF(_ sender: UITextField) {
-        
-    }
-    
-    @IBAction func loginClicked(_ sender: UIButton) {
-        
-        guard let email = emailTF.text, !email.isEmpty,
-        let password = passwordTF.text, !password.isEmpty else {
-            // Display an error message if fields are empty
-            showAlert(title: "Error", message: "Please enter both email and password.")
-            return
-        }
-        
-        // Create a new user account with Firebase Authentication
-        Auth.auth().signIn(withEmail: email, password: password) { (authResult, error) in
-            if let error = error {
-                // An error occurred during registration
-                self.showAlert(title: "Error", message: "Please continue to Register an Account")
-            } else {
-                // Registration successful
-                self.showAlert(title: "Success", message: "Login successful!")
-                self.performSegue(withIdentifier: "homeSegue", sender: nil)
-                
-                //self.present(animated: true, completion: nil)
-            }
-        }
-        
-        
-}
-    
-    
-    
-    
     
     private func applyAnimatedGradient(){
         let animatedGradient = AnimatedGradientView(frame: view.bounds)
@@ -85,54 +34,27 @@ class LoginVC: UIViewController {
         view.insertSubview(animatedGradient, at: 0)
     }
     
-
-func showAlert(title: String, message: String) {
-    let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-    let okAction = UIAlertAction(title: "OK", style: .default){ [weak self] _ in
-        
-        self?.performSegue(withIdentifier: "homeSegue", sender: nil)
-    }
-    alertController.addAction(okAction)
-    present(alertController, animated: true, completion: nil)
-}
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let identifier = segue.identifier
-        switch identifier{
-        case "goToNext":
-            guard let homevc = segue.destination as? homeTVC else {return}
-            
-        default:
-            break
-        }
-    }*/
+    @IBOutlet weak var LogoAnimationView: LottieAnimationView!
     
-
+    @IBOutlet weak var emailTF: UITextField!
     
-    @IBAction func cancelClicked(_ sender: UIButton) {
-        emailTF.text = ""
-        passwordTF.text = ""
-        loginBTN.isEnabled = false
-        resetBTN.isEnabled = false
-        passwordTF.isEnabled = false
+    @IBOutlet weak var passwordTF: UITextField!
+    
+    @IBOutlet weak var robotCheckbox: UISwitch!
+    
+    @IBOutlet weak var notARobotButton: UIButton!
+    
+    @IBOutlet weak var loginBTN: UIButton!
+    
+    @IBOutlet weak var resetBTN: UIButton!
+    
+    @IBOutlet weak var errorLBL: UILabel!
+    
+    @IBAction func loginClicked(_ sender: UIButton) {
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    @IBAction func resetClicked(_ sender: UIButton) {
+    }
     
     /*
     // MARK: - Navigation
