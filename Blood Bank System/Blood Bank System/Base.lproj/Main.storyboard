@@ -141,7 +141,7 @@
                         <outlet property="passwordTF" destination="YW4-6f-3X1" id="EXe-Mh-wDc"/>
                         <outlet property="resetBTN" destination="nPT-hD-zoQ" id="dBp-8c-oMg"/>
                         <outlet property="usernameTF" destination="kUW-wD-p22" id="oOI-E2-1HO"/>
-                        <segue destination="j6k-fn-IZU" kind="show" identifier="adminHomeSegue" id="p94-dg-LUB"/>
+                        <segue destination="j6k-fn-IZU" kind="show" identifier="homeSegue" id="p94-dg-LUB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r2k-PX-vjD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -254,6 +254,9 @@
                                                 <rect key="frame" x="0.0" y="497.33333333333343" width="353" height="39.666666666666686"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Create an Account"/>
+                                                <connections>
+                                                    <segue destination="3CQ-eH-laq" kind="show" id="iHl-dr-Bah"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kds-Fw-rBw">
                                                 <rect key="frame" x="0.0" y="545" width="353" height="0.0"/>
@@ -857,7 +860,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Vrq-g7-pJP"/>
+        <segue reference="iHl-dr-Bah"/>
+        <segue reference="p94-dg-LUB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="admin" width="250" height="250"/>
