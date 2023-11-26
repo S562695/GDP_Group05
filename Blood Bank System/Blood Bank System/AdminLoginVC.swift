@@ -36,6 +36,7 @@ class AdminLoginVC: UIViewController {
         view.insertSubview(animatedGradient, at: 0)
     }
     
+    
     @IBOutlet weak var LogoAnimationView: LottieAnimationView!
     
     @IBOutlet weak var usernameTF: UITextField!
@@ -46,52 +47,20 @@ class AdminLoginVC: UIViewController {
     
     @IBOutlet weak var resetBTN: UIButton!
     
-    @IBAction func loginClicked(_ sender: UIButton) {
-        guard let email = usernameTF.text, !email.isEmpty,
-        let password = passwordTF.text, !password.isEmpty else {
-            // Display an error message if fields are empty
-            showAlert(title: "Error", message: "Please enter both email and password.")
-            return
-        }
-        
-        // Create a new user account with Firebase Authentication
-        //Auth.auth().createUser(withEmail: email, password: password) { [self] (authResult, error) in
-             if usernameTF.text == "admin@gmail.com" && self.passwordTF.text == "lakshmi" {
-                self.showAlert(title: "Successful", message: "Admin Login Successful")
-                 self.performSegue(withIdentifier: "adminHomeSegue", sender: nil)
-                
-            }
-        //}
-        
-    }
+    @IBOutlet weak var errorLBL: UILabel!
     
-    @IBAction func resetClicked(_ sender: UIButton) {
-        usernameTF.text = ""
-        passwordTF.text = ""
-        loginBTN.isEnabled = false
-        resetBTN.isEnabled = false
-        passwordTF.isEnabled = false
-    }
     
     @IBAction func checkUsername(_ sender: UITextField) {
-        
     }
     
     @IBAction func checkPassword(_ sender: UITextField) {
-        
     }
     
-    func showAlert(title: String, message: String) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default){ [weak self] _ in
-            
-            self?.performSegue(withIdentifier: "adminHomeSegue", sender: nil)
-        }
-        alertController.addAction(okAction)
-        present(alertController, animated: true, completion: nil)
+    @IBAction func loginClicked(_ sender: UIButton) {
     }
-        
-  
+    
+    @IBAction func resetClicked(_ sender: UIButton) {
+    }
     
     /*
     // MARK: - Navigation

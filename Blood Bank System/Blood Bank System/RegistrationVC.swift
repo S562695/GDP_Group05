@@ -27,55 +27,6 @@ class RegistrationVC: UIViewController {
     
     @IBOutlet weak var LogoAnimationView: LottieAnimationView!
     
-    
-    @IBOutlet weak var emailTF: UITextField!
-    
-    @IBOutlet weak var passwordTF: UITextField!
-    
-    @IBOutlet weak var fullNameTF: UITextField!
-    
-    @IBOutlet weak var signUpBtn: UIButton!
-    
-    @IBOutlet weak var resetBTN: UIButton!
-    
-    @IBAction func signupClicked(_ sender: UIButton) {
-        
-            guard let email = emailTF.text, !email.isEmpty,
-            let password = passwordTF.text, !password.isEmpty else {
-                
-                showAlert(title: "Error", message: "Please enter both email and password.")
-                return
-            }
-            
-            // Create a new user account with Firebase Authentication
-            Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
-                if let error = error {
-                    // An error occurred during registration
-                    self.showAlert(title: "Error", message: error.localizedDescription)
-                } else {
-                    // Registration successful
-                    self.showAlert(title: "Success", message: "Registration successful! Go to Login page")
-                    
-                }
-            }
-    }
-    
-    func showAlert(title: String, message: String) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(okAction)
-        present(alertController, animated: true, completion: nil)
-    }
-    
-    @IBAction func resetClicked(_ sender: UIButton) {
-        emailTF.text = ""
-        passwordTF.text = ""
-        signUpBtn.isEnabled = false
-        resetBTN.isEnabled = false
-        passwordTF.isEnabled = false
-        fullNameTF.text = ""
-    }
-    
     private func applyAnimatedGradient(){
         let animatedGradient = AnimatedGradientView(frame: view.bounds)
         animatedGradient.direction = .up
@@ -86,6 +37,27 @@ class RegistrationVC: UIViewController {
         view.insertSubview(animatedGradient, at: 0)
     }
     
+    @IBOutlet weak var firstNameTF: UITextField!
+    
+    @IBOutlet weak var lastNameTF: UITextField!
+    
+    @IBOutlet weak var DOBField: UITextField!
+    
+    @IBOutlet weak var passwordTF: UITextField!
+    
+    @IBOutlet weak var confirmPasswordTF: UITextField!
+    
+    @IBOutlet weak var signUpBTN: UIButton!
+    
+    @IBOutlet weak var resetBTN: UIButton!
+    
+    @IBOutlet weak var errorLBL: UILabel!
+   
+    @IBAction func signUpClicked(_ sender: UIButton) {
+    }
+    
+    @IBAction func resetClicked(_ sender: UIButton) {
+    }
     /*
     // MARK: - Navigation
 

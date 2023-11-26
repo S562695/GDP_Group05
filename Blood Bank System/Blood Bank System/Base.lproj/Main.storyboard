@@ -50,11 +50,17 @@
                                                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="64.333333333333329"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
+                                                                                <connections>
+                                                                                    <action selector="checkUsername:" destination="9fn-B6-9tm" eventType="editingDidEnd" id="NvH-Cm-sMf"/>
+                                                                                </connections>
                                                                             </textField>
                                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter admin password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YW4-6f-3X1">
                                                                                 <rect key="frame" x="0.0" y="72.333333333333314" width="353" height="64"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
+                                                                                <connections>
+                                                                                    <action selector="checkPassword:" destination="9fn-B6-9tm" eventType="editingDidEnd" id="ewB-TC-vXm"/>
+                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                     </stackView>
@@ -74,6 +80,9 @@
                                                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                                                     <color key="baseBackgroundColor" systemColor="linkColor"/>
                                                                                 </buttonConfiguration>
+                                                                                <connections>
+                                                                                    <action selector="loginClicked:" destination="9fn-B6-9tm" eventType="touchUpInside" id="ZUd-n5-bnQ"/>
+                                                                                </connections>
                                                                             </button>
                                                                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPT-hD-zoQ" userLabel="ResetBTN">
                                                                                 <rect key="frame" x="180.66666666666666" y="0.0" width="81.999999999999972" height="54.666666666666664"/>
@@ -82,6 +91,9 @@
                                                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                                                     <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                                                                 </buttonConfiguration>
+                                                                                <connections>
+                                                                                    <action selector="resetClicked:" destination="9fn-B6-9tm" eventType="touchUpInside" id="tGk-DS-G4J"/>
+                                                                                </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bL4-7K-F8T">
                                                                                 <rect key="frame" x="270.66666666666669" y="0.0" width="82.333333333333314" height="54.666666666666664"/>
@@ -123,6 +135,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Welcome to Blood Bank🩸" largeTitleDisplayMode="never" id="2AC-8R-QWG"/>
                     <connections>
+                        <outlet property="LogoAnimationView" destination="gZK-jO-f6w" id="4y8-qO-5QC"/>
+                        <outlet property="errorLBL" destination="cRU-o1-ihL" id="jEP-R7-5w0"/>
+                        <outlet property="loginBTN" destination="ktk-dO-Kci" id="6ex-ir-YZu"/>
+                        <outlet property="passwordTF" destination="YW4-6f-3X1" id="EXe-Mh-wDc"/>
+                        <outlet property="resetBTN" destination="nPT-hD-zoQ" id="dBp-8c-oMg"/>
+                        <outlet property="usernameTF" destination="kUW-wD-p22" id="oOI-E2-1HO"/>
                         <segue destination="j6k-fn-IZU" kind="show" identifier="adminHomeSegue" id="p94-dg-LUB"/>
                     </connections>
                 </viewController>
@@ -262,13 +280,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="Welcome to Blood Bank🩸" largeTitleDisplayMode="never" id="OrO-tN-sgf"/>
                     <connections>
-                        <outlet property="LogoAnimationView" destination="Ym9-gg-MpH" id="yg0-Dr-foS"/>
+                        <outlet property="LogoAnimationView" destination="Ym9-gg-MpH" id="PQY-dQ-5Bh"/>
                         <outlet property="emailTF" destination="jhc-Xs-7rX" id="fYA-sR-XAn"/>
-                        <outlet property="errorLBL" destination="kds-Fw-rBw" id="L0k-Pi-aLx"/>
+                        <outlet property="errorLBL" destination="kds-Fw-rBw" id="2qB-Nn-xk9"/>
                         <outlet property="loginBTN" destination="xyM-An-qaY" id="LvY-h3-J8Q"/>
                         <outlet property="notARobotButton" destination="FFG-N4-LCU" id="t9Q-99-cSB"/>
                         <outlet property="passwordTF" destination="VzD-et-Ugh" id="T7O-4U-9aO"/>
                         <outlet property="resetBTN" destination="BMI-mM-jrq" id="9t5-ME-bO8"/>
+                        <outlet property="robotCheckbox" destination="bud-Oy-Wgb" id="2cQ-2l-aku"/>
                         <segue destination="j6k-fn-IZU" kind="show" identifier="homeSegue" id="Vrq-g7-pJP"/>
                     </connections>
                 </viewController>
@@ -684,6 +703,9 @@
                                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                                     <color key="baseBackgroundColor" red="0.3724888724" green="0.59971232230000004" blue="0.22777401520000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="signUpClicked:" destination="3CQ-eH-laq" eventType="touchUpInside" id="WdA-OP-Eic"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfD-3G-hSR" userLabel="ResetBTN">
                                                                 <rect key="frame" x="180.66666666666666" y="0.0" width="81.999999999999972" height="44.666666666666664"/>
@@ -692,6 +714,9 @@
                                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                                     <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="resetClicked:" destination="3CQ-eH-laq" eventType="touchUpInside" id="NwR-kB-Rp2"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usU-4X-myj">
                                                                 <rect key="frame" x="270.66666666666669" y="0.0" width="82.333333333333314" height="44.666666666666664"/>
@@ -728,6 +753,15 @@
                     </view>
                     <navigationItem key="navigationItem" title="Welcome to Blood Bank🩸" largeTitleDisplayMode="never" id="O6e-Mn-rIf"/>
                     <connections>
+                        <outlet property="DOBField" destination="MEt-6q-K4y" id="jBb-Uz-7cD"/>
+                        <outlet property="LogoAnimationView" destination="edx-AZ-hx1" id="Gft-qv-Xhf"/>
+                        <outlet property="confirmPasswordTF" destination="LYQ-M0-nBN" id="lAj-Um-a8k"/>
+                        <outlet property="errorLBL" destination="D4X-Zf-PnN" id="eMt-6d-oMu"/>
+                        <outlet property="firstNameTF" destination="QAF-0I-e5N" id="KWI-q1-DPd"/>
+                        <outlet property="lastNameTF" destination="hjF-SM-mz2" id="ttI-pV-leW"/>
+                        <outlet property="passwordTF" destination="4qJ-ar-ynQ" id="GNM-d4-ZNq"/>
+                        <outlet property="resetBTN" destination="vfD-3G-hSR" id="oqb-Ww-8r5"/>
+                        <outlet property="signUpBTN" destination="7Zg-qh-blB" id="AJ8-Ba-vG3"/>
                         <segue destination="j6k-fn-IZU" kind="show" identifier="homeSegue" id="QdB-lo-std"/>
                     </connections>
                 </viewController>
@@ -803,7 +837,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="QdB-lo-std"/>
+        <segue reference="p94-dg-LUB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="admin" width="250" height="250"/>
