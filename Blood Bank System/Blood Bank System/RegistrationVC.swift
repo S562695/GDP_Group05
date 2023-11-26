@@ -14,6 +14,7 @@ class RegistrationVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupDatePicker()
         self.applyAnimatedGradient()
         LogoAnimationView.animation = LottieAnimation.named("registerImg")
                 LogoAnimationView.loopMode = .loop
@@ -23,6 +24,20 @@ class RegistrationVC: UIViewController {
                 }
 
         // Do any additional setup after loading the view.
+    }
+    
+    private func setupDatePicker() {
+            let datePicker = UIDatePicker()
+            datePicker.datePickerMode = .date
+            DOBField.inputView = datePicker
+
+            datePicker.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
+        }
+
+    @objc func datePickerValueChanged(_ sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        DOBField.text = dateFormatter.string(from: sender.date)
     }
     
     @IBOutlet weak var LogoAnimationView: LottieAnimationView!
@@ -41,7 +56,11 @@ class RegistrationVC: UIViewController {
     
     @IBOutlet weak var lastNameTF: UITextField!
     
+    
     @IBOutlet weak var DOBField: UITextField!
+    
+    
+    @IBOutlet weak var emailTF: UITextField!
     
     @IBOutlet weak var passwordTF: UITextField!
     
@@ -54,9 +73,51 @@ class RegistrationVC: UIViewController {
     @IBOutlet weak var errorLBL: UILabel!
    
     @IBAction func signUpClicked(_ sender: UIButton) {
+        signUp()
     }
     
+    private func signUp() {
+            guard let firstName = firstNameTF.text,
+                  let lastName = lastNameTF.text,
+                  let dob = DOBField.text,
+                  let email = emailTF.text,
+                  let password = passwordTF.text,
+                  let confirmPassword = confirmPasswordTF.text
+            else {
+                return
+            }
+
+            // Check if passwords match
+            guard password == confirmPassword else {
+                showError(message: "Passwords do not match")
+                return
+            }
+
+            // Additional validations can be added as needed
+
+            Auth.auth().createUser(withEmail: email, password: password) { [weak self] authResult, error in
+                if let error = error {
+                    self?.showError(message: error.localizedDescription)
+                } else {
+                    self?.performSegue(withIdentifier: "homeSegue", sender: self)
+                }
+            }
+        }
+
+        private func showError(message: String) {
+            errorLBL.text = message
+            errorLBL.isHidden = false
+        }
+    
     @IBAction func resetClicked(_ sender: UIButton) {
+        firstNameTF.text = ""
+        lastNameTF.text = ""
+        DOBField.text = ""
+        emailTF.text = ""
+        passwordTF.text = ""
+        confirmPasswordTF.text = ""
+        errorLBL.text = ""
+        errorLBL.isHidden = true
     }
     /*
     // MARK: - Navigation
