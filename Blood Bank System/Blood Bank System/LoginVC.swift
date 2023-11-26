@@ -11,9 +11,14 @@ import Lottie
 import AnimatedGradientView
 
 class LoginVC: UIViewController {
-
+    private var isNotARobotVerified = false
     override func viewDidLoad() {
         super.viewDidLoad()
+        //robotCheckbox.backgroundColor = UIColor.gray
+        //robotCheckbox.layer.cornerRadius = 5
+        //robotCheckbox.layer.borderWidth = 1
+        //robotCheckbox.backgroundColor = UIColor.red
+        //notARobotButton.addTarget(self, action: #selector(notARobotButtonTapped), for: .touchUpInside)
                 self.applyAnimatedGradient()
                 LogoAnimationView.animation = LottieAnimation.named("LoginImage")
                 LogoAnimationView.loopMode = .loop
@@ -42,6 +47,7 @@ class LoginVC: UIViewController {
     
     @IBOutlet weak var robotCheckbox: UISwitch!
     
+    
     @IBOutlet weak var notARobotButton: UIButton!
     
     @IBOutlet weak var loginBTN: UIButton!
@@ -51,10 +57,48 @@ class LoginVC: UIViewController {
     @IBOutlet weak var errorLBL: UILabel!
     
     @IBAction func loginClicked(_ sender: UIButton) {
+        if robotCheckbox.isOn {
+                    login()
+                } else {
+                    showError(message: "Please verify that you are not a robot.")
+                }
     }
     
+    private func login() {
+            guard let email = emailTF.text,
+                  let password = passwordTF.text
+            else {
+                return
+            }
+
+            Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+                if let error = error {
+                    self?.showError(message: error.localizedDescription)
+                } else {
+                    // User successfully logged in
+                    // You can navigate to another screen or perform additional actions
+                    self?.performSegue(withIdentifier: "homeSegue", sender: self)
+                }
+            }
+        }
+    
     @IBAction func resetClicked(_ sender: UIButton) {
+        emailTF.text = ""
+        passwordTF.text = ""
+        errorLBL.text = ""
+        errorLBL.isHidden = true
+        isNotARobotVerified = false
+      
     }
+    
+    @IBAction func notARobotButtonTapped(_ sender: UIButton) {
+        robotCheckbox.isOn = true
+    }
+    
+   private func showError(message: String) {
+            errorLBL.text = message
+            errorLBL.isHidden = false
+        }
     
     /*
     // MARK: - Navigation

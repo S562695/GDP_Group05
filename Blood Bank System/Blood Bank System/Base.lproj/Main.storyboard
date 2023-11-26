@@ -188,19 +188,22 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="Mc8-uu-zTi">
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mc8-uu-zTi">
                                                                 <rect key="frame" x="0.0" y="84.666666666666686" width="353" height="34.333333333333343"/>
                                                                 <subviews>
-                                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bud-Oy-Wgb">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="34.333333333333336"/>
+                                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dyx-Ny-H5P">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="84.333333333333329" height="34.333333333333336"/>
                                                                     </switch>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFG-N4-LCU">
-                                                                        <rect key="frame" x="70" y="0.0" width="283" height="34.333333333333336"/>
+                                                                        <rect key="frame" x="99.333333333333329" y="0.0" width="253.66666666666669" height="34.333333333333336"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="filled" title="I am not a robot" cornerStyle="dynamic">
                                                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                                                             <color key="baseBackgroundColor" systemColor="opaqueSeparatorColor"/>
                                                                         </buttonConfiguration>
+                                                                        <connections>
+                                                                            <action selector="notARobotButtonTapped:" destination="AYe-j6-W6l" eventType="touchUpInside" id="q2b-RO-Z5c"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -287,7 +290,7 @@
                         <outlet property="notARobotButton" destination="FFG-N4-LCU" id="t9Q-99-cSB"/>
                         <outlet property="passwordTF" destination="VzD-et-Ugh" id="T7O-4U-9aO"/>
                         <outlet property="resetBTN" destination="BMI-mM-jrq" id="9t5-ME-bO8"/>
-                        <outlet property="robotCheckbox" destination="bud-Oy-Wgb" id="2cQ-2l-aku"/>
+                        <outlet property="robotCheckbox" destination="dyx-Ny-H5P" id="SEQ-H9-d5b"/>
                         <segue destination="j6k-fn-IZU" kind="show" identifier="homeSegue" id="Vrq-g7-pJP"/>
                     </connections>
                 </viewController>
@@ -854,7 +857,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="QdB-lo-std"/>
+        <segue reference="Vrq-g7-pJP"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="admin" width="250" height="250"/>
