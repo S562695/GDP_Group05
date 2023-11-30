@@ -143,7 +143,6 @@
                         <outlet property="passwordTF" destination="YW4-6f-3X1" id="EXe-Mh-wDc"/>
                         <outlet property="resetBTN" destination="nPT-hD-zoQ" id="dBp-8c-oMg"/>
                         <outlet property="usernameTF" destination="kUW-wD-p22" id="oOI-E2-1HO"/>
-                        <segue destination="j6k-fn-IZU" kind="show" identifier="homeSegue" id="p94-dg-LUB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r2k-PX-vjD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -298,7 +297,7 @@
                         <outlet property="passwordTF" destination="VzD-et-Ugh" id="T7O-4U-9aO"/>
                         <outlet property="resetBTN" destination="BMI-mM-jrq" id="9t5-ME-bO8"/>
                         <outlet property="robotCheckbox" destination="dyx-Ny-H5P" id="SEQ-H9-d5b"/>
-                        <segue destination="j6k-fn-IZU" kind="show" identifier="homeSegue" id="Vrq-g7-pJP"/>
+                        <segue destination="ToA-RM-eyl" kind="show" identifier="homeSegue" id="H9O-uC-YUk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bjK-pn-8B9" sceneMemberID="firstResponder"/>
@@ -308,6 +307,7 @@
         <!--Give Blood - Save Lives-->
         <scene sceneID="3G6-rh-43U">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="THG-Im-laS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="j6k-fn-IZU" customClass="homeTVC" customModule="Blood_Bank_System" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="8dc-gt-XfS">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -498,7 +498,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Give Blood - Save Lives" id="0S3-Xw-aH3"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="THG-Im-laS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2424" y="744"/>
         </scene>
@@ -522,26 +521,36 @@
         <scene sceneID="Tn7-qL-m3o">
             <objects>
                 <tableViewController id="MoB-du-OiD" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="GVP-0O-EQ9">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="GVP-0O-EQ9">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="TKs-rC-cKu">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TKs-rC-cKu" id="3py-zY-vBF">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
+                        <sections>
+                            <tableViewSection headerTitle="Blood Groups" id="YOS-eh-yPd">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hsY-fW-xKD">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hsY-fW-xKD" id="LXj-li-tFb">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wLl-WO-tAw" userLabel="BigContainerSV">
+                                                    <rect key="frame" x="98" y="11" width="75" height="34.333333333333336"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </stackView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
                         <connections>
                             <outlet property="dataSource" destination="MoB-du-OiD" id="EBP-cU-MIq"/>
                             <outlet property="delegate" destination="MoB-du-OiD" id="odx-2R-lcU"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Donor" id="Rb9-D2-Umj"/>
+                    <tabBarItem key="tabBarItem" title="Donor" selectedImage="person" catalog="system" id="Rb9-D2-Umj"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jhE-Sr-LcS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -551,6 +560,7 @@
         <scene sceneID="iyR-2v-pND">
             <objects>
                 <tabBarController id="ToA-RM-eyl" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="g64-fB-jiS"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q16-0L-MtH">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -844,7 +854,7 @@
                         <outlet property="passwordTF" destination="4qJ-ar-ynQ" id="GNM-d4-ZNq"/>
                         <outlet property="resetBTN" destination="vfD-3G-hSR" id="oqb-Ww-8r5"/>
                         <outlet property="signUpBTN" destination="7Zg-qh-blB" id="AJ8-Ba-vG3"/>
-                        <segue destination="j6k-fn-IZU" kind="show" identifier="homeSegue" id="QdB-lo-std"/>
+                        <segue destination="ToA-RM-eyl" kind="show" identifier="homeSegue" id="FGr-ZB-hD3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PiB-76-4hq" sceneMemberID="firstResponder"/>
@@ -901,96 +911,17 @@
             </objects>
             <point key="canvasLocation" x="4666" y="499"/>
         </scene>
-        <!--Side Menu View Controller-->
-        <scene sceneID="2BN-3g-1E6">
-            <objects>
-                <viewController storyboardIdentifier="SideMenuID" id="DOE-Pz-IE4" customClass="SideMenuViewController" customModule="Blood_Bank_System" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Fkk-bd-sWp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbC-qP-6em">
-                                <rect key="frame" x="0.0" y="40" width="320" height="128"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lpg-mo-8LG">
-                                        <rect key="frame" x="20" y="30" width="50" height="49.666666666666671"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="Fdo-te-bSj"/>
-                                            <constraint firstAttribute="height" constant="51" id="cSM-bZ-tRe"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3I-nv-gCN">
-                                        <rect key="frame" x="90" y="29" width="0.0" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOu-Pl-Foh">
-                                        <rect key="frame" x="90" y="36.666666666666671" width="0.0" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="G3I-nv-gCN" firstAttribute="leading" secondItem="lpg-mo-8LG" secondAttribute="trailing" constant="20" id="8rs-ZP-2Vm"/>
-                                    <constraint firstItem="WOu-Pl-Foh" firstAttribute="leading" secondItem="lpg-mo-8LG" secondAttribute="trailing" constant="20" id="Avc-fY-Gy3"/>
-                                    <constraint firstItem="lpg-mo-8LG" firstAttribute="centerY" secondItem="dbC-qP-6em" secondAttribute="centerY" constant="-9.5" id="ENF-HR-akN"/>
-                                    <constraint firstItem="WOu-Pl-Foh" firstAttribute="top" secondItem="G3I-nv-gCN" secondAttribute="bottom" constant="7.5" id="LMI-Rx-cPM"/>
-                                    <constraint firstAttribute="height" constant="128" id="X4j-Gy-GEI"/>
-                                    <constraint firstItem="lpg-mo-8LG" firstAttribute="leading" secondItem="dbC-qP-6em" secondAttribute="leading" constant="20" id="avm-8t-epN"/>
-                                    <constraint firstItem="G3I-nv-gCN" firstAttribute="top" secondItem="dbC-qP-6em" secondAttribute="top" constant="29" id="u1N-DQ-VWV"/>
-                                </constraints>
-                            </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cxB-ni-FBf">
-                                <rect key="frame" x="0.0" y="168" width="320" height="633"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AI6-Ks-Tcw">
-                                <rect key="frame" x="30" y="821" width="260" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="sWL-Cl-HAJ"/>
-                        <color key="backgroundColor" red="0.0" green="0.36875027249999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="sWL-Cl-HAJ" firstAttribute="trailing" secondItem="dbC-qP-6em" secondAttribute="trailing" id="2e7-47-4oa"/>
-                            <constraint firstItem="sWL-Cl-HAJ" firstAttribute="trailing" secondItem="AI6-Ks-Tcw" secondAttribute="trailing" constant="30" id="Iaz-2i-uQ4"/>
-                            <constraint firstItem="AI6-Ks-Tcw" firstAttribute="leading" secondItem="sWL-Cl-HAJ" secondAttribute="leading" constant="30" id="JdL-dL-ToL"/>
-                            <constraint firstItem="dbC-qP-6em" firstAttribute="top" secondItem="Fkk-bd-sWp" secondAttribute="top" constant="40" id="OAk-MC-2Jg"/>
-                            <constraint firstItem="sWL-Cl-HAJ" firstAttribute="trailing" secondItem="cxB-ni-FBf" secondAttribute="trailing" id="Owr-AI-peP"/>
-                            <constraint firstItem="sWL-Cl-HAJ" firstAttribute="bottom" secondItem="AI6-Ks-Tcw" secondAttribute="bottom" constant="20" id="PmF-Qj-C1a"/>
-                            <constraint firstItem="dbC-qP-6em" firstAttribute="leading" secondItem="sWL-Cl-HAJ" secondAttribute="leading" id="T0s-sc-mFm"/>
-                            <constraint firstItem="cxB-ni-FBf" firstAttribute="top" secondItem="dbC-qP-6em" secondAttribute="bottom" id="cld-zu-fOT"/>
-                            <constraint firstItem="cxB-ni-FBf" firstAttribute="leading" secondItem="sWL-Cl-HAJ" secondAttribute="leading" id="nuF-oZ-hsZ"/>
-                            <constraint firstItem="AI6-Ks-Tcw" firstAttribute="top" secondItem="cxB-ni-FBf" secondAttribute="bottom" constant="20" id="xln-hl-S1q"/>
-                        </constraints>
-                    </view>
-                    <size key="freeformSize" width="320" height="896"/>
-                    <connections>
-                        <outlet property="footerLabel" destination="AI6-Ks-Tcw" id="273-6c-JD3"/>
-                        <outlet property="headerImageView" destination="lpg-mo-8LG" id="Tim-bI-yEE"/>
-                        <outlet property="sideMenuTableView" destination="cxB-ni-FBf" id="CjD-O1-bSL"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OcV-Lb-DyH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3095" y="779"/>
-        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="n2d-uD-Q3Z"/>
-        <segue reference="QdB-lo-std"/>
+        <segue reference="iHl-dr-Bah"/>
+        <segue reference="FGr-ZB-hD3"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="admin" width="250" height="250"/>
         <image name="bb" width="512" height="512"/>
         <image name="donor1" width="1200" height="800"/>
         <image name="patient" width="225" height="225"/>
-        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="person" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
