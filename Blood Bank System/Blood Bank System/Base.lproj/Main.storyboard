@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -297,7 +298,7 @@
                         <outlet property="passwordTF" destination="VzD-et-Ugh" id="T7O-4U-9aO"/>
                         <outlet property="resetBTN" destination="BMI-mM-jrq" id="9t5-ME-bO8"/>
                         <outlet property="robotCheckbox" destination="dyx-Ny-H5P" id="SEQ-H9-d5b"/>
-                        <segue destination="ToA-RM-eyl" kind="show" identifier="homeSegue" id="H9O-uC-YUk"/>
+                        <segue destination="sFA-r1-w9l" kind="show" identifier="homeSegue" id="aBV-Wm-UBe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bjK-pn-8B9" sceneMemberID="firstResponder"/>
@@ -307,7 +308,6 @@
         <!--Give Blood - Save Lives-->
         <scene sceneID="3G6-rh-43U">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="THG-Im-laS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="j6k-fn-IZU" customClass="homeTVC" customModule="Blood_Bank_System" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="8dc-gt-XfS">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -498,6 +498,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Give Blood - Save Lives" id="0S3-Xw-aH3"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="THG-Im-laS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2424" y="744"/>
         </scene>
@@ -854,12 +855,12 @@
                         <outlet property="passwordTF" destination="4qJ-ar-ynQ" id="GNM-d4-ZNq"/>
                         <outlet property="resetBTN" destination="vfD-3G-hSR" id="oqb-Ww-8r5"/>
                         <outlet property="signUpBTN" destination="7Zg-qh-blB" id="AJ8-Ba-vG3"/>
-                        <segue destination="ToA-RM-eyl" kind="show" identifier="homeSegue" id="FGr-ZB-hD3"/>
+                        <segue destination="sFA-r1-w9l" kind="show" identifier="homeSegue" id="lcQ-Mz-HGP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PiB-76-4hq" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1141" y="646"/>
+            <point key="canvasLocation" x="1413" y="702"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CXn-Br-uDP">
@@ -895,6 +896,37 @@
             </objects>
             <point key="canvasLocation" x="4669" y="-414"/>
         </scene>
+        <!--Donor MapVC View Controller-->
+        <scene sceneID="7C0-du-d6t">
+            <objects>
+                <viewController id="sFA-r1-w9l" customClass="DonorMapVCViewController" customModule="Blood_Bank_System" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fUm-0a-knJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZ6-Ti-cyn">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Hx3-3t-qsa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hx3-3t-qsa" firstAttribute="trailing" secondItem="mZ6-Ti-cyn" secondAttribute="trailing" id="2yW-Ao-bn4"/>
+                            <constraint firstItem="mZ6-Ti-cyn" firstAttribute="top" secondItem="Hx3-3t-qsa" secondAttribute="top" id="C0N-AN-uZo"/>
+                            <constraint firstItem="Hx3-3t-qsa" firstAttribute="bottom" secondItem="mZ6-Ti-cyn" secondAttribute="bottom" id="E9s-tA-P5s"/>
+                            <constraint firstItem="mZ6-Ti-cyn" firstAttribute="leading" secondItem="Hx3-3t-qsa" secondAttribute="leading" id="X7k-g4-bQ4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="t6m-bP-fie"/>
+                    <connections>
+                        <outlet property="mapView" destination="mZ6-Ti-cyn" id="QRi-uk-F9E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cqp-9f-GJ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3208" y="649"/>
+        </scene>
         <!--Banks-->
         <scene sceneID="KXZ-Zc-IoM">
             <objects>
@@ -913,8 +945,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="aBV-Wm-UBe"/>
         <segue reference="iHl-dr-Bah"/>
-        <segue reference="FGr-ZB-hD3"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="admin" width="250" height="250"/>

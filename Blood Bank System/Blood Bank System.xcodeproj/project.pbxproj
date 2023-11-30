@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11F522622B188E0100DD4370 /* CollectionDonorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F522602B188E0100DD4370 /* CollectionDonorTableViewCell.swift */; };
+		11F522632B188E0100DD4370 /* CollectionDonorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11F522612B188E0100DD4370 /* CollectionDonorTableViewCell.xib */; };
+		11F522662B188E7100DD4370 /* DonorCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F522642B188E7100DD4370 /* DonorCollectionCell.swift */; };
+		11F522672B188E7100DD4370 /* DonorCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11F522652B188E7100DD4370 /* DonorCollectionCell.xib */; };
+		11F522692B188EF400DD4370 /* DonorTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F522682B188EF400DD4370 /* DonorTVC.swift */; };
+		11F5226B2B194BFB00DD4370 /* DonorMapVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F5226A2B194BFB00DD4370 /* DonorMapVCViewController.swift */; };
 		3896CCEA2AE2F270004107F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3896CCE92AE2F270004107F1 /* AppDelegate.swift */; };
 		3896CCEC2AE2F270004107F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3896CCEB2AE2F270004107F1 /* SceneDelegate.swift */; };
 		3896CCEE2AE2F270004107F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3896CCED2AE2F270004107F1 /* ViewController.swift */; };
@@ -46,6 +52,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11F522602B188E0100DD4370 /* CollectionDonorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDonorTableViewCell.swift; sourceTree = "<group>"; };
+		11F522612B188E0100DD4370 /* CollectionDonorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionDonorTableViewCell.xib; sourceTree = "<group>"; };
+		11F522642B188E7100DD4370 /* DonorCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorCollectionCell.swift; sourceTree = "<group>"; };
+		11F522652B188E7100DD4370 /* DonorCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonorCollectionCell.xib; sourceTree = "<group>"; };
+		11F522682B188EF400DD4370 /* DonorTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorTVC.swift; sourceTree = "<group>"; };
+		11F5226A2B194BFB00DD4370 /* DonorMapVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorMapVCViewController.swift; sourceTree = "<group>"; };
 		3896CCE62AE2F270004107F1 /* Blood Bank System.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blood Bank System.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3896CCE92AE2F270004107F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3896CCEB2AE2F270004107F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +108,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11F5225E2B188D9B00DD4370 /* Collection Cell */ = {
+			isa = PBXGroup;
+			children = (
+				11F522642B188E7100DD4370 /* DonorCollectionCell.swift */,
+				11F522652B188E7100DD4370 /* DonorCollectionCell.xib */,
+			);
+			path = "Collection Cell";
+			sourceTree = "<group>";
+		};
+		11F5225F2B188DB800DD4370 /* Table Cell */ = {
+			isa = PBXGroup;
+			children = (
+				11F522602B188E0100DD4370 /* CollectionDonorTableViewCell.swift */,
+				11F522612B188E0100DD4370 /* CollectionDonorTableViewCell.xib */,
+			);
+			path = "Table Cell";
+			sourceTree = "<group>";
+		};
 		3896CCDD2AE2F270004107F1 = {
 			isa = PBXGroup;
 			children = (
@@ -119,13 +149,17 @@
 		3896CCE82AE2F270004107F1 /* Blood Bank System */ = {
 			isa = PBXGroup;
 			children = (
+				11F5225F2B188DB800DD4370 /* Table Cell */,
+				11F5225E2B188D9B00DD4370 /* Collection Cell */,
 				3896CCE92AE2F270004107F1 /* AppDelegate.swift */,
+				11F522682B188EF400DD4370 /* DonorTVC.swift */,
 				3896CCEB2AE2F270004107F1 /* SceneDelegate.swift */,
 				3896CCED2AE2F270004107F1 /* ViewController.swift */,
 				40E5E1952AE3550E00AB5640 /* HomeVC.swift */,
 				40E5E1932AE34AFD00AB5640 /* RegistrationVC.swift */,
 				3896CD1C2AE2F5C6004107F1 /* LoginVC.swift */,
 				3896CCEF2AE2F270004107F1 /* Main.storyboard */,
+				11F5226A2B194BFB00DD4370 /* DonorMapVCViewController.swift */,
 				40E2CE682AFE367800CCCEB1 /* homeTVC.swift */,
 				4007BFA02AFE0C7E00EECA4B /* AdminLoginVC.swift */,
 				3896CCF52AE2F271004107F1 /* Assets.xcassets */,
@@ -268,7 +302,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11F522632B188E0100DD4370 /* CollectionDonorTableViewCell.xib in Resources */,
 				3896CCF92AE2F271004107F1 /* LaunchScreen.storyboard in Resources */,
+				11F522672B188E7100DD4370 /* DonorCollectionCell.xib in Resources */,
 				40E5E1982AE357E100AB5640 /* GoogleService-Info.plist in Resources */,
 				3896CCF62AE2F271004107F1 /* Assets.xcassets in Resources */,
 				3896CCF12AE2F270004107F1 /* Main.storyboard in Resources */,
@@ -297,13 +333,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3896CCEE2AE2F270004107F1 /* ViewController.swift in Sources */,
+				11F5226B2B194BFB00DD4370 /* DonorMapVCViewController.swift in Sources */,
 				40E5E1962AE3550E00AB5640 /* HomeVC.swift in Sources */,
 				4007BFA12AFE0C7E00EECA4B /* AdminLoginVC.swift in Sources */,
 				40E5E1942AE34AFD00AB5640 /* RegistrationVC.swift in Sources */,
+				11F522692B188EF400DD4370 /* DonorTVC.swift in Sources */,
 				3896CCF42AE2F270004107F1 /* Blood_Bank_System.xcdatamodeld in Sources */,
 				3896CCEA2AE2F270004107F1 /* AppDelegate.swift in Sources */,
+				11F522662B188E7100DD4370 /* DonorCollectionCell.swift in Sources */,
 				3896CCEC2AE2F270004107F1 /* SceneDelegate.swift in Sources */,
 				40E2CE692AFE367800CCCEB1 /* homeTVC.swift in Sources */,
+				11F522622B188E0100DD4370 /* CollectionDonorTableViewCell.swift in Sources */,
 				3896CD1D2AE2F5C6004107F1 /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
