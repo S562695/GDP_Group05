@@ -32,6 +32,7 @@ class scheduleVC: UIViewController {
     @IBOutlet weak var scheduleBTN: UIButton!
     
     @IBAction func scheduleClicked(_ sender: UIButton) {
+        errorLBL.text = "Your appointment is Scheduled"
     }
     
     @IBOutlet weak var errorLBL: UILabel!

@@ -144,6 +144,7 @@
                         <outlet property="passwordTF" destination="YW4-6f-3X1" id="EXe-Mh-wDc"/>
                         <outlet property="resetBTN" destination="nPT-hD-zoQ" id="dBp-8c-oMg"/>
                         <outlet property="usernameTF" destination="kUW-wD-p22" id="oOI-E2-1HO"/>
+                        <segue destination="ToA-RM-eyl" kind="show" identifier="homeSegue" id="hha-XS-FsE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r2k-PX-vjD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -305,203 +306,6 @@
             </objects>
             <point key="canvasLocation" x="2067.93893129771" y="-178.87323943661974"/>
         </scene>
-        <!--Give Blood - Save Lives-->
-        <scene sceneID="3G6-rh-43U">
-            <objects>
-                <tableViewController id="j6k-fn-IZU" customClass="homeTVC" customModule="Blood_Bank_System" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="8dc-gt-XfS">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <sections>
-                            <tableViewSection headerTitle="Blood Bank System🩸" id="ebO-fe-r25">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DashboardCell" textLabel="agu-e3-ejd" imageView="WQx-Jd-PBW" style="IBUITableViewCellStyleDefault" id="yk6-kn-lPv">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yk6-kn-lPv" id="bOd-Be-Cv2">
-                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Donor Management" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="agu-e3-ejd">
-                                                    <rect key="frame" x="101" y="0.0" width="253.66666666666669" height="43.666667938232422"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="donor1" id="WQx-Jd-PBW">
-                                                    <rect key="frame" x="20" y="0.0" width="66" height="43.666666666666664"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DashboardCell" textLabel="VkM-l6-o8X" imageView="5ia-Gq-Wqu" style="IBUITableViewCellStyleDefault" id="1oC-RU-Svo">
-                                        <rect key="frame" x="0.0" y="93.666667938232422" width="393" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1oC-RU-Svo" id="hcd-x9-LLP">
-                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="       Patient Management" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VkM-l6-o8X">
-                                                    <rect key="frame" x="79" y="0.0" width="275.66666666666669" height="43.666667938232422"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="patient" id="5ia-Gq-Wqu">
-                                                    <rect key="frame" x="20" y="0.0" width="44" height="43.666666666666664"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DashboardCell" textLabel="Xba-WY-DSY" imageView="mi0-Lo-TVn" style="IBUITableViewCellStyleDefault" id="yir-Me-PTo">
-                                        <rect key="frame" x="0.0" y="137.33333587646484" width="393" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yir-Me-PTo" id="toN-SZ-GYc">
-                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="       Admin Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xba-WY-DSY">
-                                                    <rect key="frame" x="79" y="0.0" width="275.66666666666669" height="43.666667938232422"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="admin" id="mi0-Lo-TVn">
-                                                    <rect key="frame" x="20" y="0.0" width="44" height="43.666666666666664"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesID" id="uYO-nI-uLQ" userLabel="DashboardCell" customClass="CategorietypeCell" customModule="Blood_Bank_System" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="181.00000381469727" width="393" height="54.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uYO-nI-uLQ" id="ClX-mX-gSK">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="54.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="s3w-4d-Td9" userLabel="BigContainer">
-                                                    <rect key="frame" x="20" y="10" width="363" height="34.666666666666664"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEN-qo-JtS">
-                                                            <rect key="frame" x="0.0" y="0.0" width="363" height="34.666666666666664"/>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="filled" title="Schedule Appointment" cornerStyle="capsule">
-                                                                <color key="baseBackgroundColor" systemColor="systemRedColor"/>
-                                                            </buttonConfiguration>
-                                                        </button>
-                                                    </subviews>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="s3w-4d-Td9" firstAttribute="leading" secondItem="ClX-mX-gSK" secondAttribute="leading" constant="20" id="4D1-UI-ypH"/>
-                                                <constraint firstAttribute="bottom" secondItem="s3w-4d-Td9" secondAttribute="bottom" constant="10" id="IlH-A3-5eM"/>
-                                                <constraint firstItem="s3w-4d-Td9" firstAttribute="top" secondItem="ClX-mX-gSK" secondAttribute="top" constant="10" id="MJp-Nn-KnQ"/>
-                                                <constraint firstAttribute="trailing" secondItem="s3w-4d-Td9" secondAttribute="trailing" constant="10" id="q71-e2-mbv"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesID" id="Dpx-DR-2Um" userLabel="DashboardCell" customClass="CategorietypeCell" customModule="Blood_Bank_System" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="235.66667175292969" width="393" height="46.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dpx-DR-2Um" id="kKd-Eb-63M">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="46.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HmW-JI-8bE" userLabel="BigContainer">
-                                                    <rect key="frame" x="20" y="10.000000000000002" width="363" height="26.666666666666671"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to our Blood bank System!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6l-G8-o3d">
-                                                            <rect key="frame" x="0.0" y="0.0" width="363" height="26.666666666666668"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                                            <color key="textColor" systemColor="systemRedColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="HmW-JI-8bE" secondAttribute="bottom" constant="10" id="3Td-Aj-xW1"/>
-                                                <constraint firstItem="HmW-JI-8bE" firstAttribute="leading" secondItem="kKd-Eb-63M" secondAttribute="leading" constant="20" id="UTt-F7-qte"/>
-                                                <constraint firstAttribute="trailing" secondItem="HmW-JI-8bE" secondAttribute="trailing" constant="10" id="ZXi-CI-7Ss"/>
-                                                <constraint firstItem="HmW-JI-8bE" firstAttribute="top" secondItem="kKd-Eb-63M" secondAttribute="top" constant="10" id="ySb-F7-MxW"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesID" rowHeight="126" id="wTn-0k-6VS" userLabel="DashboardCell" customClass="CategorietypeCell" customModule="Blood_Bank_System" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="282.33333969116211" width="393" height="126"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wTn-0k-6VS" id="SbT-TU-4h1">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="126"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="d9w-l6-bd2" userLabel="BigContainer">
-                                                    <rect key="frame" x="20" y="10" width="363" height="106"/>
-                                                    <subviews>
-                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3GT-Be-na7">
-                                                            <rect key="frame" x="0.0" y="0.0" width="363" height="106"/>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                            <string key="text">We are here to revolutionize the blood donation process and empower lives, one drop at a time, with the ultimate iOS Blood Bank System.</string>
-                                                            <color key="textColor" systemColor="labelColor"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                        </textView>
-                                                    </subviews>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="d9w-l6-bd2" secondAttribute="bottom" constant="10" id="DCe-nF-elc"/>
-                                                <constraint firstItem="d9w-l6-bd2" firstAttribute="leading" secondItem="SbT-TU-4h1" secondAttribute="leading" constant="20" id="bFz-Fg-9wF"/>
-                                                <constraint firstItem="d9w-l6-bd2" firstAttribute="top" secondItem="SbT-TU-4h1" secondAttribute="top" constant="10" id="dm9-zw-lfo"/>
-                                                <constraint firstAttribute="trailing" secondItem="d9w-l6-bd2" secondAttribute="trailing" constant="10" id="snB-eI-uGO"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesID" rowHeight="126" id="mwi-nR-IJ7" userLabel="DashboardCell" customClass="CategorietypeCell" customModule="Blood_Bank_System" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="408.33333969116211" width="393" height="126"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mwi-nR-IJ7" id="Y9Q-hL-BAv">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="126"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="k6h-ma-c4c" userLabel="BigContainer">
-                                                    <rect key="frame" x="20" y="10" width="363" height="106"/>
-                                                    <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bb" highlightedImage="bb" highlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MW8-43-Yub">
-                                                            <rect key="frame" x="0.0" y="0.0" width="363" height="106"/>
-                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
-                                                        </imageView>
-                                                    </subviews>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="k6h-ma-c4c" firstAttribute="top" secondItem="Y9Q-hL-BAv" secondAttribute="top" constant="10" id="Ubz-u6-bNE"/>
-                                                <constraint firstAttribute="bottom" secondItem="k6h-ma-c4c" secondAttribute="bottom" constant="10" id="fnp-X2-Dg4"/>
-                                                <constraint firstItem="k6h-ma-c4c" firstAttribute="leading" secondItem="Y9Q-hL-BAv" secondAttribute="leading" constant="20" id="hFb-OO-fSz"/>
-                                                <constraint firstAttribute="trailing" secondItem="k6h-ma-c4c" secondAttribute="trailing" constant="10" id="twI-Rv-OH7"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="j6k-fn-IZU" id="BCM-41-D0U"/>
-                            <outlet property="delegate" destination="j6k-fn-IZU" id="bfr-4K-yMA"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Give Blood - Save Lives" id="0S3-Xw-aH3"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="THG-Im-laS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2384" y="1244"/>
-        </scene>
         <!--Schedule-->
         <scene sceneID="snq-Hi-uNe">
             <objects>
@@ -604,6 +408,9 @@
                                                     <color key="baseForegroundColor" red="0.99845552039999996" green="1" blue="0.99406281569999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <color key="baseBackgroundColor" red="0.0" green="0.59383896049999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="3CQ-eH-laq" kind="show" id="1nW-vH-eIn"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wV6-yY-jzd">
                                                 <rect key="frame" x="0.0" y="117.6666666666667" width="353" height="50.666666666666671"/>
@@ -612,6 +419,9 @@
                                                     <color key="baseForegroundColor" red="0.99845552039999996" green="1" blue="0.99406281569999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="wio-vE-Eed" kind="show" id="xQg-6C-Gr6"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LI-bS-HV1">
                                                 <rect key="frame" x="0.0" y="176.33333333333331" width="353" height="50.666666666666657"/>
@@ -619,6 +429,9 @@
                                                 <buttonConfiguration key="configuration" style="filled" title="Back to My Account" cornerStyle="medium">
                                                     <color key="baseBackgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="ToA-RM-eyl" kind="show" id="Tto-qa-BAb"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -712,7 +525,7 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jr6-cL-lTf">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jr6-cL-lTf">
                                         <rect key="frame" x="0.0" y="368.66666666666669" width="353" height="176.33333333333331"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
@@ -746,25 +559,82 @@
         <!--Donor-->
         <scene sceneID="Tn7-qL-m3o">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jhE-Sr-LcS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="MoB-du-OiD" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="GVP-0O-EQ9">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="77" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="GVP-0O-EQ9">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="l7f-Pa-7vB">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="nNa-PY-lPG">
+                            <rect key="frame" x="0.0" y="258" width="393" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Add Donor" cornerStyle="capsule">
+                                <color key="baseBackgroundColor" red="0.94514146541644184" green="0.57069701160280639" blue="0.52671217282784677" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <segue destination="C2Y-4A-FwH" kind="show" id="FkY-kV-gOV"/>
+                            </connections>
+                        </button>
                         <sections>
                             <tableViewSection headerTitle="Blood Groups" id="YOS-eh-yPd">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hsY-fW-xKD">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" textLabel="q60-6c-Ynf" rowHeight="56" style="IBUITableViewCellStyleDefault" id="aoI-rs-RNM">
+                                        <rect key="frame" x="0.0" y="94" width="393" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hsY-fW-xKD" id="LXj-li-tFb">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aoI-rs-RNM" id="Y8O-nA-qeo">
+                                            <rect key="frame" x="0.0" y="0.0" width="349" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wLl-WO-tAw" userLabel="BigContainerSV">
-                                                    <rect key="frame" x="98" y="11" width="75" height="34.333333333333336"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </stackView>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Welcome Lakshmi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="q60-6c-Ynf">
+                                                    <rect key="frame" x="20" y="0.0" width="321" height="56"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                    <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="XuF-Xp-9f7" rowHeight="40" style="IBUITableViewCellStyleDefault" id="hsY-fW-xKD">
+                                        <rect key="frame" x="0.0" y="150" width="393" height="40"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hsY-fW-xKD" id="LXj-li-tFb">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="40"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Blood Types" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XuF-Xp-9f7">
+                                                    <rect key="frame" x="20" y="0.0" width="353" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="S0m-wH-MDz" rowHeight="40" style="IBUITableViewCellStyleDefault" id="czr-ro-MMZ">
+                                        <rect key="frame" x="0.0" y="190" width="393" height="40"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="czr-ro-MMZ" id="552-vK-lB9">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="40"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Donations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S0m-wH-MDz">
+                                                    <rect key="frame" x="20" y="0.0" width="353" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -778,14 +648,14 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Donor" selectedImage="person" catalog="system" id="Rb9-D2-Umj"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jhE-Sr-LcS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3676" y="-388"/>
+            <point key="canvasLocation" x="3675.5725190839694" y="-388.02816901408454"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="iyR-2v-pND">
             <objects>
                 <tabBarController id="ToA-RM-eyl" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="to0-SI-irF"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q16-0L-MtH">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -795,7 +665,6 @@
                     <connections>
                         <segue destination="MoB-du-OiD" kind="relationship" relationship="viewControllers" id="y8B-Am-S35"/>
                         <segue destination="dcg-p0-tQE" kind="relationship" relationship="viewControllers" id="EyQ-qK-M6o"/>
-                        <segue destination="C2Y-4A-FwH" kind="relationship" relationship="viewControllers" id="CH1-yM-6L1"/>
                         <segue destination="QZC-io-gbX" kind="relationship" relationship="viewControllers" id="nxW-1J-ceU"/>
                     </connections>
                 </tabBarController>
@@ -1104,17 +973,118 @@
             </objects>
             <point key="canvasLocation" x="235.87786259541983" y="-80.281690140845072"/>
         </scene>
-        <!--Request-->
+        <!--Add Donor Details-->
         <scene sceneID="F24-qj-FnF">
             <objects>
                 <viewController id="C2Y-4A-FwH" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yqc-61-fp5">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="o7Q-qK-ph1">
+                                <rect key="frame" x="20" y="123" width="353" height="495"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YJd-AO-4Dt">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="76"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firstname : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzZ-DP-tei">
+                                                <rect key="frame" x="0.0" y="0.0" width="88.666666666666671" height="76"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter first name " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jrv-uC-UaB">
+                                                <rect key="frame" x="96.666666666666657" y="0.0" width="256.33333333333337" height="76"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="D6g-77-KIL">
+                                        <rect key="frame" x="0.0" y="84" width="353" height="75.666666666666686"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lastname : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aA-4y-eAX">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="75.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NT1-hp-Pqx">
+                                                <rect key="frame" x="96" y="0.0" width="257" height="75.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ar5-4E-HDI">
+                                        <rect key="frame" x="0.0" y="167.66666666666669" width="353" height="76"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact No : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rvu-Dt-BH3">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="76"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter contact number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3fy-8s-z1Q">
+                                                <rect key="frame" x="108" y="0.0" width="245" height="76"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WC4-Vv-Sne">
+                                        <rect key="frame" x="0.0" y="251.66666666666666" width="353" height="75.666666666666657"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blood Group : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBA-PQ-Jwg">
+                                                <rect key="frame" x="0.0" y="0.0" width="108.66666666666667" height="75.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xZz-On-dkk">
+                                                <rect key="frame" x="116.66666666666664" y="0.0" width="236.33333333333337" height="75.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DSL-k5-xiD">
+                                        <rect key="frame" x="0.0" y="335.33333333333331" width="353" height="76"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medical Report : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEd-Gf-xti">
+                                                <rect key="frame" x="0.0" y="0.0" width="128.33333333333334" height="76"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="10d-gh-WQI">
+                                                <rect key="frame" x="136.33333333333337" y="0.0" width="216.66666666666663" height="76"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pu7-Jq-5tO">
+                                        <rect key="frame" x="0.0" y="419.33333333333337" width="353" height="75.666666666666686"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Add">
+                                            <color key="baseBackgroundColor" red="0.94514146539999999" green="0.57069701159999997" blue="0.52671217280000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="UcN-CE-UPp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="o7Q-qK-ph1" firstAttribute="leading" secondItem="UcN-CE-UPp" secondAttribute="leading" constant="20" id="8Yz-0x-3YV"/>
+                            <constraint firstItem="UcN-CE-UPp" firstAttribute="bottom" secondItem="o7Q-qK-ph1" secondAttribute="bottom" constant="200" id="JVo-I6-2PT"/>
+                            <constraint firstItem="o7Q-qK-ph1" firstAttribute="top" secondItem="UcN-CE-UPp" secondAttribute="top" constant="20" id="Lvw-gG-OK5"/>
+                            <constraint firstItem="UcN-CE-UPp" firstAttribute="trailing" secondItem="o7Q-qK-ph1" secondAttribute="trailing" constant="20" id="wsr-Tm-Dlh"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Request" id="Gyv-09-eP5"/>
+                    <navigationItem key="navigationItem" title="Add Donor Details" id="PMY-18-RUA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LDL-lK-Rip" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1241,15 +1211,13 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="iHl-dr-Bah"/>
-        <segue reference="Ti8-yA-MIa"/>
+        <segue reference="4y0-KX-y0q"/>
+        <segue reference="dMm-vc-bj4"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="admin" width="250" height="250"/>
         <image name="bb" width="512" height="512"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
-        <image name="donor1" width="1200" height="800"/>
         <image name="logo" width="512" height="512"/>
-        <image name="patient" width="225" height="225"/>
         <image name="person" catalog="system" width="128" height="121"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
@@ -1263,6 +1231,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
