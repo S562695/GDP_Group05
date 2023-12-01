@@ -13,6 +13,10 @@
 		11F522672B188E7100DD4370 /* DonorCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11F522652B188E7100DD4370 /* DonorCollectionCell.xib */; };
 		11F522692B188EF400DD4370 /* DonorTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F522682B188EF400DD4370 /* DonorTVC.swift */; };
 		11F5226B2B194BFB00DD4370 /* DonorMapVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F5226A2B194BFB00DD4370 /* DonorMapVCViewController.swift */; };
+		11F5226D2B19C3E700DD4370 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F5226C2B19C3E700DD4370 /* LocationManager.swift */; };
+		11F522722B19D35700DD4370 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F522712B19D35700DD4370 /* SideMenuVC.swift */; };
+		11F522742B19D9B900DD4370 /* profileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F522732B19D9B900DD4370 /* profileVC.swift */; };
+		11F522762B19EA3D00DD4370 /* ProfileEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F522752B19EA3D00DD4370 /* ProfileEditVC.swift */; };
 		3896CCEA2AE2F270004107F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3896CCE92AE2F270004107F1 /* AppDelegate.swift */; };
 		3896CCEC2AE2F270004107F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3896CCEB2AE2F270004107F1 /* SceneDelegate.swift */; };
 		3896CCEE2AE2F270004107F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3896CCED2AE2F270004107F1 /* ViewController.swift */; };
@@ -58,6 +62,11 @@
 		11F522652B188E7100DD4370 /* DonorCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonorCollectionCell.xib; sourceTree = "<group>"; };
 		11F522682B188EF400DD4370 /* DonorTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorTVC.swift; sourceTree = "<group>"; };
 		11F5226A2B194BFB00DD4370 /* DonorMapVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorMapVCViewController.swift; sourceTree = "<group>"; };
+		11F5226C2B19C3E700DD4370 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		11F5226E2B19CE7E00DD4370 /* Blood Bank System.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Blood Bank System.xctestplan"; sourceTree = "<group>"; };
+		11F522712B19D35700DD4370 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		11F522732B19D9B900DD4370 /* profileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileVC.swift; sourceTree = "<group>"; };
+		11F522752B19EA3D00DD4370 /* ProfileEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditVC.swift; sourceTree = "<group>"; };
 		3896CCE62AE2F270004107F1 /* Blood Bank System.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blood Bank System.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3896CCE92AE2F270004107F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3896CCEB2AE2F270004107F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +138,7 @@
 		3896CCDD2AE2F270004107F1 = {
 			isa = PBXGroup;
 			children = (
+				11F5226E2B19CE7E00DD4370 /* Blood Bank System.xctestplan */,
 				3896CCE82AE2F270004107F1 /* Blood Bank System */,
 				3896CD022AE2F271004107F1 /* Blood Bank SystemTests */,
 				3896CD0C2AE2F271004107F1 /* Blood Bank SystemUITests */,
@@ -159,7 +169,11 @@
 				40E5E1932AE34AFD00AB5640 /* RegistrationVC.swift */,
 				3896CD1C2AE2F5C6004107F1 /* LoginVC.swift */,
 				3896CCEF2AE2F270004107F1 /* Main.storyboard */,
+				11F522752B19EA3D00DD4370 /* ProfileEditVC.swift */,
+				11F522732B19D9B900DD4370 /* profileVC.swift */,
 				11F5226A2B194BFB00DD4370 /* DonorMapVCViewController.swift */,
+				11F522712B19D35700DD4370 /* SideMenuVC.swift */,
+				11F5226C2B19C3E700DD4370 /* LocationManager.swift */,
 				40E2CE682AFE367800CCCEB1 /* homeTVC.swift */,
 				4007BFA02AFE0C7E00EECA4B /* AdminLoginVC.swift */,
 				3896CCF52AE2F271004107F1 /* Assets.xcassets */,
@@ -336,15 +350,19 @@
 				11F5226B2B194BFB00DD4370 /* DonorMapVCViewController.swift in Sources */,
 				40E5E1962AE3550E00AB5640 /* HomeVC.swift in Sources */,
 				4007BFA12AFE0C7E00EECA4B /* AdminLoginVC.swift in Sources */,
+				11F522742B19D9B900DD4370 /* profileVC.swift in Sources */,
 				40E5E1942AE34AFD00AB5640 /* RegistrationVC.swift in Sources */,
 				11F522692B188EF400DD4370 /* DonorTVC.swift in Sources */,
 				3896CCF42AE2F270004107F1 /* Blood_Bank_System.xcdatamodeld in Sources */,
 				3896CCEA2AE2F270004107F1 /* AppDelegate.swift in Sources */,
 				11F522662B188E7100DD4370 /* DonorCollectionCell.swift in Sources */,
 				3896CCEC2AE2F270004107F1 /* SceneDelegate.swift in Sources */,
+				11F5226D2B19C3E700DD4370 /* LocationManager.swift in Sources */,
+				11F522762B19EA3D00DD4370 /* ProfileEditVC.swift in Sources */,
 				40E2CE692AFE367800CCCEB1 /* homeTVC.swift in Sources */,
 				11F522622B188E0100DD4370 /* CollectionDonorTableViewCell.swift in Sources */,
 				3896CD1D2AE2F5C6004107F1 /* LoginVC.swift in Sources */,
+				11F522722B19D35700DD4370 /* SideMenuVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

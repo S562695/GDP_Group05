@@ -1,0 +1,43 @@
+{
+  "configurations" : [
+    {
+      "id" : "B034D5FC-0B1A-4935-A1B3-EA0979FD0D8D",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "locationScenario" : {
+      "identifier" : "New York, NY, USA",
+      "referenceType" : "built-in"
+    },
+    "region" : "US",
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Blood Bank System.xcodeproj",
+      "identifier" : "3896CCE52AE2F270004107F1",
+      "name" : "Blood Bank System"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Blood Bank System.xcodeproj",
+        "identifier" : "3896CCFE2AE2F271004107F1",
+        "name" : "Blood Bank SystemTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Blood Bank System.xcodeproj",
+        "identifier" : "3896CD082AE2F271004107F1",
+        "name" : "Blood Bank SystemUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
