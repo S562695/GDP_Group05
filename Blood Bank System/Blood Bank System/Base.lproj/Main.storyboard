@@ -500,7 +500,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="THG-Im-laS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2424" y="744"/>
+            <point key="canvasLocation" x="2384" y="1244"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="snq-Hi-uNe">
@@ -516,6 +516,9 @@
                         <imageReference key="selectedImage" image="calendar" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="FrL-ms-jTh"/>
+                    <connections>
+                        <segue destination="VbS-mE-Htz" kind="show" identifier="scheduleSegue" id="s5L-i0-hFf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="peK-mV-1cl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -541,7 +544,7 @@
                                                 <color key="textColor" systemColor="systemRedColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fVQ-Vm-Qhi">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lakshmi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fVQ-Vm-Qhi">
                                                 <rect key="frame" x="180.66666666666663" y="0.0" width="172.33333333333337" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -557,7 +560,7 @@
                                                 <color key="textColor" systemColor="systemRedColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L46-mf-LVI">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Konanki" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L46-mf-LVI">
                                                 <rect key="frame" x="180.66666666666663" y="0.0" width="172.33333333333337" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -573,7 +576,7 @@
                                                 <color key="textColor" systemColor="systemRedColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0TO-bU-xal">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="lakshmi99@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0TO-bU-xal">
                                                 <rect key="frame" x="180.66666666666663" y="0.0" width="172.33333333333337" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -581,18 +584,21 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="749-60-SbZ">
-                                        <rect key="frame" x="0.0" y="189" width="353" height="184.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="189" width="353" height="227"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNp-Yb-IRf">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="50.666666666666664"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Save" cornerStyle="medium">
                                                     <color key="baseForegroundColor" red="0.99845552039999996" green="1" blue="0.99406281569999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <color key="baseBackgroundColor" red="0.0" green="0.59383896049999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="baseBackgroundColor" red="0.0" green="0.70626011875688077" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="saveBTNClicked:" destination="STd-sO-nQY" eventType="touchUpInside" id="col-tC-8VN"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcR-Yt-Eg7">
-                                                <rect key="frame" x="0.0" y="48" width="353" height="40.333333333333343"/>
+                                                <rect key="frame" x="0.0" y="58.666666666666686" width="353" height="51"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Update Password" cornerStyle="medium">
                                                     <color key="baseForegroundColor" red="0.99845552039999996" green="1" blue="0.99406281569999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -600,15 +606,15 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wV6-yY-jzd">
-                                                <rect key="frame" x="0.0" y="96.333333333333314" width="353" height="40"/>
+                                                <rect key="frame" x="0.0" y="117.6666666666667" width="353" height="50.666666666666671"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Delete Account " cornerStyle="medium">
                                                     <color key="baseForegroundColor" red="0.99845552039999996" green="1" blue="0.99406281569999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <color key="baseBackgroundColor" red="0.0" green="0.59383896049999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LI-bS-HV1">
-                                                <rect key="frame" x="0.0" y="144.33333333333331" width="353" height="40"/>
+                                                <rect key="frame" x="0.0" y="176.33333333333331" width="353" height="50.666666666666657"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Back to My Account" cornerStyle="medium">
                                                     <color key="baseBackgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -617,9 +623,9 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izv-x9-SGG">
-                                        <rect key="frame" x="0.0" y="402.33333333333337" width="353" height="92.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="445" width="353" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -636,28 +642,87 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Schedule" id="BDR-1X-oL9"/>
                     <navigationItem key="navigationItem" title="Edit Account" id="TfN-a3-3XL"/>
+                    <connections>
+                        <outlet property="emailTF" destination="0TO-bU-xal" id="LMr-N9-0f9"/>
+                        <outlet property="errorLBL" destination="izv-x9-SGG" id="VRu-I5-hTv"/>
+                        <outlet property="firstNameTF" destination="fVQ-Vm-Qhi" id="C4S-Tv-BPy"/>
+                        <outlet property="lastNameTF" destination="L46-mf-LVI" id="wFv-Xb-xVF"/>
+                        <outlet property="saveBTN" destination="RNp-Yb-IRf" id="9RY-Pd-Gkp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SIT-Px-T8W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4640" y="370"/>
         </scene>
-        <!--Side MenuVC-->
+        <!--Schedule Appointment-->
         <scene sceneID="BR2-40-FkY">
             <objects>
                 <viewController id="VbS-mE-Htz" customClass="SideMenuVC" customModule="Blood_Bank_System" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T38-T9-QNp">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="akU-dO-BP1">
+                                <rect key="frame" x="20" y="123" width="353" height="545"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="cO3-gu-Txh">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="109.66666666666667"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select date and time : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ib2-Dw-Mhe">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="33.666666666666664"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="textColor" systemColor="systemRedColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="xd3-z9-UQm">
+                                                <rect key="frame" x="0.0" y="59.666666666666657" width="353" height="50"/>
+                                            </datePicker>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oEA-Ca-aiG">
+                                        <rect key="frame" x="0.0" y="133.66666666666669" width="353" height="200.33333333333331"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select patient blood group: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zei-qg-ut7">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="96.333333333333329"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="textColor" systemColor="systemRedColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="osb-eC-1ZW">
+                                                <rect key="frame" x="0.0" y="104.33333333333331" width="353" height="96"/>
+                                            </pickerView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TX6-kT-yw3">
+                                        <rect key="frame" x="0.0" y="358" width="353" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Schedule my appointment" cornerStyle="capsule">
+                                            <color key="baseBackgroundColor" systemColor="systemTealColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jr6-cL-lTf">
+                                        <rect key="frame" x="0.0" y="416.33333333333337" width="353" height="128.66666666666663"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="pwx-tu-VfJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="akU-dO-BP1" firstAttribute="leading" secondItem="pwx-tu-VfJ" secondAttribute="leading" constant="20" id="H2h-2x-dXm"/>
+                            <constraint firstItem="pwx-tu-VfJ" firstAttribute="trailing" secondItem="akU-dO-BP1" secondAttribute="trailing" constant="20" id="JtX-fK-Dvo"/>
+                            <constraint firstItem="akU-dO-BP1" firstAttribute="top" secondItem="pwx-tu-VfJ" secondAttribute="top" constant="20" id="wLj-8p-Na3"/>
+                            <constraint firstItem="pwx-tu-VfJ" firstAttribute="bottom" secondItem="akU-dO-BP1" secondAttribute="bottom" constant="150" id="zYh-Dn-HfZ"/>
+                        </constraints>
                     </view>
-                    <connections>
-                        <segue destination="dcg-p0-tQE" kind="show" identifier="scheduleSegue" id="zFW-KW-YJ2"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="Schedule Appointment" id="n9M-gd-enJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XIV-v2-BKX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3963" y="1011"/>
+            <point key="canvasLocation" x="3962.5954198473282" y="1010.5633802816902"/>
         </scene>
         <!--Donor-->
         <scene sceneID="Tn7-qL-m3o">
@@ -1158,7 +1223,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="iHl-dr-Bah"/>
         <segue reference="Ti8-yA-MIa"/>
-        <segue reference="EyQ-qK-M6o"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="admin" width="250" height="250"/>
@@ -1189,6 +1253,9 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
