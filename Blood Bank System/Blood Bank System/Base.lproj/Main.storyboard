@@ -657,51 +657,63 @@
         <!--Schedule Appointment-->
         <scene sceneID="BR2-40-FkY">
             <objects>
-                <viewController id="VbS-mE-Htz" customClass="SideMenuVC" customModule="Blood_Bank_System" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VbS-mE-Htz" customClass="scheduleVC" customModule="Blood_Bank_System" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T38-T9-QNp">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="akU-dO-BP1">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="akU-dO-BP1">
                                 <rect key="frame" x="20" y="123" width="353" height="545"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="cO3-gu-Txh">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="109.66666666666667"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cO3-gu-Txh">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="176.33333333333334"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select date and time : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ib2-Dw-Mhe">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="33.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="53.333333333333336"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <color key="textColor" systemColor="systemRedColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="xd3-z9-UQm">
-                                                <rect key="frame" x="0.0" y="59.666666666666657" width="353" height="50"/>
-                                            </datePicker>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="select date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j98-Su-bVh">
+                                                <rect key="frame" x="0.0" y="61.333333333333343" width="353" height="53.666666666666657"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="selectTime" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JCk-au-Y20">
+                                                <rect key="frame" x="0.0" y="122.99999999999999" width="353" height="53.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oEA-Ca-aiG">
-                                        <rect key="frame" x="0.0" y="133.66666666666669" width="353" height="200.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="184.33333333333331" width="353" height="176.33333333333331"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select patient blood group: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zei-qg-ut7">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="96.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="53.333333333333336"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <color key="textColor" systemColor="systemRedColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="osb-eC-1ZW">
-                                                <rect key="frame" x="0.0" y="104.33333333333331" width="353" height="96"/>
-                                            </pickerView>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HJp-jO-XI2">
+                                                <rect key="frame" x="0.0" y="61.333333333333371" width="353" height="53.666666666666657"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TX6-kT-yw3">
+                                                <rect key="frame" x="0.0" y="122.99999999999999" width="353" height="53.333333333333329"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Schedule my appointment" cornerStyle="capsule">
+                                                    <color key="baseBackgroundColor" systemColor="systemTealColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="scheduleClicked:" destination="VbS-mE-Htz" eventType="touchUpInside" id="QBA-fH-2bh"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TX6-kT-yw3">
-                                        <rect key="frame" x="0.0" y="358" width="353" height="34.333333333333314"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Schedule my appointment" cornerStyle="capsule">
-                                            <color key="baseBackgroundColor" systemColor="systemTealColor"/>
-                                        </buttonConfiguration>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jr6-cL-lTf">
-                                        <rect key="frame" x="0.0" y="416.33333333333337" width="353" height="128.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="368.66666666666669" width="353" height="176.33333333333331"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
@@ -719,6 +731,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Schedule Appointment" id="n9M-gd-enJ"/>
+                    <connections>
+                        <outlet property="bloodGroupTextField" destination="HJp-jO-XI2" id="ENi-E0-6XZ"/>
+                        <outlet property="dateTextField" destination="j98-Su-bVh" id="UUg-U3-A2w"/>
+                        <outlet property="errorLBL" destination="Jr6-cL-lTf" id="KaS-o0-vpA"/>
+                        <outlet property="scheduleBTN" destination="TX6-kT-yw3" id="M23-9q-37X"/>
+                        <outlet property="timeTextField" destination="JCk-au-Y20" id="7Vo-sh-TIn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XIV-v2-BKX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

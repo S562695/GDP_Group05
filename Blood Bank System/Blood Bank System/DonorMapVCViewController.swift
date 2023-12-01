@@ -17,7 +17,7 @@ class DonorMapVCViewController: UIViewController, CLLocationManagerDelegate {
     private let scheduleButton: UIButton = {
             let button = UIButton()
             button.setTitle("Schedule", for: .normal)
-            button.backgroundColor = .systemBlue
+            button.backgroundColor = .cyan
             button.addTarget(self, action: #selector(scheduleButtonTapped), for: .touchUpInside)
             return button
         }()
@@ -25,7 +25,7 @@ class DonorMapVCViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         view.addSubview (map)
         view.addSubview(scheduleButton)
-        title = "Select a map to view information"
+        title = "Maps"
         LocationManager.shared.getUserLocation { [weak self] location in
             DispatchQueue.main.async {
                 guard let strongSelf = self else {
@@ -38,7 +38,7 @@ class DonorMapVCViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLayoutSubviews () {
         super.viewDidLayoutSubviews ()
         map.frame = view.bounds
-        let buttonHeight: CGFloat = 50
+        let buttonHeight: CGFloat = 150
                 scheduleButton.frame = CGRect(x: 0,
                                               y: view.bounds.height - buttonHeight,
                                               width: view.bounds.width,
@@ -61,5 +61,6 @@ class DonorMapVCViewController: UIViewController, CLLocationManagerDelegate {
     @objc private func scheduleButtonTapped() {
             // Add your scheduling logic here
             print("Schedule button tapped!")
+        performSegue(withIdentifier: "scheduleSegue", sender: self)
         }
 }

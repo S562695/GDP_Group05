@@ -17,6 +17,7 @@
 		11F522722B19D35700DD4370 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F522712B19D35700DD4370 /* SideMenuVC.swift */; };
 		11F522742B19D9B900DD4370 /* profileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F522732B19D9B900DD4370 /* profileVC.swift */; };
 		11F522762B19EA3D00DD4370 /* ProfileEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F522752B19EA3D00DD4370 /* ProfileEditVC.swift */; };
+		11F522782B19FFA400DD4370 /* scheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F522772B19FFA400DD4370 /* scheduleVC.swift */; };
 		3896CCEA2AE2F270004107F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3896CCE92AE2F270004107F1 /* AppDelegate.swift */; };
 		3896CCEC2AE2F270004107F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3896CCEB2AE2F270004107F1 /* SceneDelegate.swift */; };
 		3896CCEE2AE2F270004107F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3896CCED2AE2F270004107F1 /* ViewController.swift */; };
@@ -67,6 +68,7 @@
 		11F522712B19D35700DD4370 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		11F522732B19D9B900DD4370 /* profileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileVC.swift; sourceTree = "<group>"; };
 		11F522752B19EA3D00DD4370 /* ProfileEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditVC.swift; sourceTree = "<group>"; };
+		11F522772B19FFA400DD4370 /* scheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleVC.swift; sourceTree = "<group>"; };
 		3896CCE62AE2F270004107F1 /* Blood Bank System.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blood Bank System.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3896CCE92AE2F270004107F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3896CCEB2AE2F270004107F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				40E5E1932AE34AFD00AB5640 /* RegistrationVC.swift */,
 				3896CD1C2AE2F5C6004107F1 /* LoginVC.swift */,
 				3896CCEF2AE2F270004107F1 /* Main.storyboard */,
+				11F522772B19FFA400DD4370 /* scheduleVC.swift */,
 				11F522752B19EA3D00DD4370 /* ProfileEditVC.swift */,
 				11F522732B19D9B900DD4370 /* profileVC.swift */,
 				11F5226A2B194BFB00DD4370 /* DonorMapVCViewController.swift */,
@@ -355,6 +358,7 @@
 				11F522692B188EF400DD4370 /* DonorTVC.swift in Sources */,
 				3896CCF42AE2F270004107F1 /* Blood_Bank_System.xcdatamodeld in Sources */,
 				3896CCEA2AE2F270004107F1 /* AppDelegate.swift in Sources */,
+				11F522782B19FFA400DD4370 /* scheduleVC.swift in Sources */,
 				11F522662B188E7100DD4370 /* DonorCollectionCell.swift in Sources */,
 				3896CCEC2AE2F270004107F1 /* SceneDelegate.swift in Sources */,
 				11F5226D2B19C3E700DD4370 /* LocationManager.swift in Sources */,
